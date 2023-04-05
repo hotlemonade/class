@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 20% 0 20%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#logo {
+    width: 260px;
+}
+
+#button{
+    border: 2px solid green;
+    width: 520px;
+    height: 40px;
+    margin-left: 20px;
+    
+}
+
+input{
+    font-size: 20px;
+    width: 280px;
+    height: 25;
+    padding: 5px;
+    border: 0px;
+    outline: none;
+    float: left;
+}
+
+button{
+    border: 2px solid green;
+    background-color: green;
+    height: 40px;
+    width: 40px;
+    margin-left: 280px;
+}
+
+#section1-line{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 15px;
+}
+
+#section1{
+    display: inline-flex;
+    /* list-style 이 li 앞부분에 점을 말한다 */
+    list-style: none;
+    
+}
+
+#section1 li{
+    padding-left: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+}
+
+.div-left{
+    width: 67%;
+    float: left;
+    height: 100vh;
+    
+}
+
+.div-right{
+    width: 29%;
+    float: right;
+    height: 100vh;
+    
+}
+
+.banner{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.login{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.news{
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid lightgrey;
+}

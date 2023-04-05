@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0 15% 0 15%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    /* 사진과 검색창을 한줄에 표시 하기위해서는 dispaly: flex; 선정후 align-itemsL cneter;을 이용하여 한줄로 만들어 준다. */
+    height: 150px;
+}
+
+.box-container .box{
+    width: 80px;
+    height: 40px;
+} 
+
+#logo{
+    width: 270px;
+    float: left;
+}
+
+#search{
+    margin-left: 10px;
+}
+
+.list{
+    
+    display: inline-flex;
+    /* linline-flex, inline-block, flex 의 차의가 무엇인가?
+    
+    왜 flex로 설정했을시 ul li태그가 아래로 내려가지 않는 것일까?
+    */
+    list-style: none;
+    margin-left: 20px;
+    
+}
+
+.list li{
+    float: left;
+    margin-right: 30px;
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+#list_line{
+    border-top: solid lightgray ;
+    border-bottom: solid lightgray ;
+    padding: 20px;
+    /* body의 margin값을 받지 않게 하는 방법은 없을까? */
+}
+
+.btn{
+    height: 40px;
+    width: 450px;
+    border: 2px solid green;
+    margin-left: 20px;
+}
+
+input{
+    font-size: 16px;
+    width: 325px;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    float: left;
+}
+
+button{
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    height: 40px;
+    width: 40px;
+    font-weight: bold;
+    margin-left: 55px;
+}
