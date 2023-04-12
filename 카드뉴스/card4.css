@@ -1,0 +1,99 @@
+.card {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+    margin: 100px auto 20px auto;
+    overflow: hidden;
+    
+  
+  }
+  
+  div.ul{
+    /* flex 프로그 게임 */
+    display: flex;
+    /* 가로정렬 flex 일때 */
+    justify-content: center;
+    /* 새로정렬 flex 일때 */
+    align-items: center;
+    height: 100vh; /* 수직 가운데 정렬을 위해 높이를 설정합니다. */
+  }
+  .card_img {
+    /* width: 50%; */
+    /* height: auto; */
+    /* 블럭요소 사진 정렬 방법 */
+    margin: 0 auto;
+    width: 100%;
+    /* display: inline; */
+    margin-top: 10px; 
+    /* margin-left: 125px; */
+  }
+
+  .card_img img{
+    border: 3px solid gray;
+  }
+  
+  .card-text {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0;
+  }
+  
+  .card-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+  
+  }
+  
+  ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      
+  }
+  
+  li{
+      list-style: none;
+      margin: 3px;
+      padding: 8px;
+      font-size: 13px;
+  }
+  
+  .center{
+      text-align: center;
+  }
+  
+  
+  .btn_pepe{
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    background: orange;
+    box-shadow: 0 3px #3b8a98;
+    position: relative;
+    display: inline-block;
+    top: -2px;
+    padding: 
+    10px 20px;
+}
+
+.btn_pepe:hover{
+    box-shadow: 0 1px rosybrown;
+    top: 1px;
+}
+
+span{
+  width: 100;
+}

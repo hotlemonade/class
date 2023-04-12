@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{margin: 0;}
+
+    .section{
+        display: none; 
+        width: 100%; height: 300px; 
+        position: absolute; top: 200px;left: 0;
+    }
+    #section1{display: block; background-color: aliceblue;}
+    #section2{background-color:  pink;}
+    #section3{background-color: blue;}
+    #section4{background-color: black;}
+    #section5{background-color: yellow;}
+    
+</style>
+<body>
+
+    <!-- <script>
+        window.onlode = function(){
+            console.log(document.getElementById("menu1"));
+        }
+        
+    </script> -->
+    
+    
+    <h1>자바스크립트로 메 제어하기</h1>
+    <ul id="mainMenu">
+        <li id="menu1"><a href="#">menu1</a></li>
+        <li id="menu2"><a href="#">menu2</a></li>
+        <li id="menu3"><a href="#">menu3</a></li>
+        <li id="menu4"><a href="#">menu4</a></li>
+        <li id="menu5"><a href="#">menu5</a></li>
+    </ul>
+
+    <section id="section1" class="section">
+        <h2>section</h2>
+    </section>
+    <section id="section2" class="section">
+        <h2>section</h2>
+    </section>
+    <section id="section3" class="section">
+        <h2>section</h2>
+    </section>
+    <section id="section4" class="section">
+        <h2>section</h2>
+    </section>
+    <section id="section5" class="section">
+        <h2>section</h2>
+    </section>
+
+    <script>
+        for(var i=1; i<=5; i++){
+            // console.log(i);
+            document.getElementById("menu"+1).onclick = function(){
+            menuInit();
+            // console.log(i);
+            console.log(this.id.slice(0,2));
+            console.log(this.id.slice(0,1));
+            console.log(this.id.slice(0,3));
+            // document.getElementById("section1").style.display = "block"
+        }
+        }
+        var menuInit = function(){
+            console.log("메뉴 초기화");
+            document.getElementById("section1").style.display = "none";
+            document.getElementById("section2").style.display = "none";
+            document.getElementById("section3").style.display = "none";
+            document.getElementById("section4").style.display = "none";
+            document.getElementById("section5").style.display = "none";
+        }
+
+        // document.getElementById("menu1").onclick = function(){
+        //     menuInit();
+        //     document.getElementById("section1").style.display = "block"
+        // }
+
+        // document.getElementById("menu2").onclick = function(){
+        //     menuInit();
+        //     document.getElementById("section2").style.display = "block"
+        // }
+
+        // document.getElementById("menu3").onclick = function(){
+        //     menuInit();
+        //     document.getElementById("section3").style.display = "block"
+        // }
+
+        // document.getElementById("menu4").onclick = function(){
+        //     menuInit();
+        //     document.getElementById("section4").style.display = "block"
+        // }
+        
+        // document.getElementById("menu5").onclick = function(){
+        //     menuInit();
+        //     document.getElementById("section5").style.display = "block"
+        // }
+        
+        // document.getElementById("menu1").onclick = function(){
+        //     document.getElementById("section1").style.display = "block";
+        //     document.getElementById("section2").style.display = "none";
+        //     document.getElementById("section3").style.display = "none";
+        //     document.getElementById("section4").style.display = "none";
+        //     document.getElementById("section5").style.display = "none";
+        // }
+        
+        // document.getElementById("menu2").onclick = function(){
+        //     document.getElementById("section1").style.display = "none";
+        //     document.getElementById("section2").style.display = "block";
+        //     document.getElementById("section3").style.display = "none";
+        //     document.getElementById("section4").style.display = "none";
+        //     document.getElementById("section5").style.display = "none";
+        // }
+
+        // document.getElementById("menu3").onclick = function(){
+        //     document.getElementById("section1").style.display = "none";
+        //     document.getElementById("section2").style.display = "none";
+        //     document.getElementById("section3").style.display = "block";
+        //     document.getElementById("section4").style.display = "none";
+        //     document.getElementById("section5").style.display = "none";
+        // }
+
+        // document.getElementById("menu4").onclick = function(){
+        //     document.getElementById("section1").style.display = "none";
+        //     document.getElementById("section2").style.display = "none";
+        //     document.getElementById("section3").style.display = "none";
+        //     document.getElementById("section4").style.display = "block";
+        //     document.getElementById("section5").style.display = "none";
+        // }
+
+        // document.getElementById("menu5").onclick = function(){
+        //     document.getElementById("section1").style.display = "none";
+        //     document.getElementById("section2").style.display = "none";
+        //     document.getElementById("section3").style.display = "none";
+        //     document.getElementById("section4").style.display = "none";
+        //     document.getElementById("section5").style.display = "block";
+        // }
+
+        
+    </script>
+</body>
+</html>

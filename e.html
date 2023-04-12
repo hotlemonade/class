@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-menu{
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-menu a{
+            background-color: #0bd;
+            padding: 1rem;
+            color: #fff;
+            display: inline-block;
+            margin: 1rem;
+        }
+
+        .main-menu a:hover{
+            background-color: #0090aa;
+        }
+        /* 서브 메뉴 */
+
+        .sub-menu{
+            position: absolute;
+            top: 4.5rem;
+            left: 1rem;
+            
+
+        }
+
+        .sub-menu a {
+            margin: 1px;
+            width: 180px;
+            background-color: #666;
+            
+        }
+
+        /* 서브메뉴가 있음을 표시하는 메뉴 */
+
+        .has-menu{
+            position: relative;
+            text-decoration: none;
+            
+        }
+
+        .has-menu > a::after{
+            font-weight: 900;
+            margin-left: .5rem;
+        }
+
+        /* 보통떄는 서브 메뉴를 숨김 */
+        .has-menu .sub-menu{
+            display: none;
+            
+        }
+
+        /* 커서를 갖다 대면 서브 메뉴가 보이도록 설정 */
+        .has-menu:hover .sub-menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="main-menu">
+            <li>
+                <a href="">홈</a>
+                <li class="has-menu">
+                    <a href="">서비스♥︎</a>
+                    <ul class="sub-menu">
+                        <li><a href="">서비스1</a></li>
+                        <li><a href="">서비스2</a></li>
+                        <li><a href="">서비스3</a></li>
+                    </ul>
+                </li>
+            </li>
+        </ul>
+
+    </nav>
+</body>
+</html>
