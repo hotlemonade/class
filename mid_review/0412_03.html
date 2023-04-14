@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            background-color:#f5f5f5;
+            padding:50px;
+            width:90%;
+            margin:0 auto;
+            display:flex;
+            justify-content: space-around;
+        }
+
+        .wrap .btn {
+            width:100px;height:100px;
+            border-radius:50%;
+            background-color:maroon;color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            order:2;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        .wrap .btn:active + .A {
+            display:block;
+        }
+        .wrap .btn:active + .A + .B{
+            display:block;
+        }
+
+        .wrap .btn:hover {
+            background-color:olive;
+
+        }
+        .wrap .A, .wrap .B {
+             display:none;
+        }
+
+        .wrap .A {
+            order:1;
+        }
+
+        .wrap .B {
+            order:3;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="btn">OPEN</div>
+        <div class="A">LEFT</div>
+        <div class="B">RIGHT</div>
+    </div>
+</body>
+</html>

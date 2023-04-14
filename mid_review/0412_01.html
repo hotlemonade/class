@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding:0}
+     
+        .wrap {
+            display:flex;align-items:center;
+            justify-content:center;
+            height:100vh;
+            width:100vw;
+            background-color:#222; 
+        }
+        .a {background-color:olivedrab;font-size:30px;color:#fff;text-align:center; width:50%;
+            /*
+                margin:1px 2px 3px 4px; 상, 우, 하, 좌
+                margin:1px 2px 3px; 상, 좌우, 하
+                margin:1px 2px; 상하, 좌우.
+                margin:1px; 상하좌우
+            */
+           /* margin:0 0 0 auto; 우측정렬 */
+            /*  margin:0 auto;블럭요소 중앙정렬 방법 */
+        }
+
+        footer {
+            color:#fff;
+            position:absolute;
+            outline:1px solid red;
+            left:50%;
+            bottom:100px;
+            transform:translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="a">A</div>
+        <footer>
+            <p>상호: 계원카지노 |  대표자명: 도과장 | 개인정보</p>
+            
+            <p>사업자등록번호: 000-00-00000</p>
+            
+            <p>주소: 경기도 의왕시 계원대학로 66</p>
+        </footer>
+    </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            outline:1px solid red;
+        }
+
+        ul + span { background-color:pink;}
+        li:hover {
+            color:red;
+        }
+
+        li:hover span {
+            font-size:30px;
+        }
+
+        ul:active + span {
+            display:none;
+        }
+
+        .wrap button {
+            transition:0.4s;
+        }
+
+        .wrap button:hover {
+            transform:scale(1.5)
+        }
+
+        .number-wrap {
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap:20px;
+            row-gap:20px;
+            height:500px;
+            max-width:500px;
+            margin:0 auto;
+        }
+        .number-wrap button { 
+            cursor:pointer;
+            border:none;
+            background-color:beige;
+        }
+
+        .number-wrap button:active {
+            background-color:dodgerblue;
+            color:#fff;
+        }
+
+        .number-wrap button:active span {
+            opacity:1;
+        }
+
+        .number-wrap span {
+            font-size:40px;
+            opacity:0; 
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>list 1<span>SPAN</span></li>
+        <li>list 2<span>SPAN</span></li>
+        <li>list 3<span>SPAN</span></li>
+        <li>list 4<span>SPAN</span></li>
+    </ul>
+    <span>SPAN</span>
+
+    <div class="wrap">
+        <button type="button">A</button>
+        <button type="button">B</button>
+    </div>
+
+    <div class="number-wrap">
+        <button type="button">
+            <span>1</span>
+        </button>
+        <button type="button">
+            <span>3</span>
+        </button>
+        <button type="button">
+            <span>5</span>
+        </button>
+        <button type="button">
+            <span>9</span>
+        </button>
+        <button type="button">
+            <span>7</span>
+        </button>
+        <button type="button">
+            <span>6</span>
+        </button>
+        <button type="button">
+            <span>2</span>
+        </button>
+        <button type="button">
+            <span>4</span>
+        </button>
+        <button type="button">
+            <span>8</span>
+        </button>
+    </div>
+</body>
+</html>
