@@ -9,17 +9,18 @@
     height: 100vh;
     width: 100vw;
     background-color: black;
+    text-align: center;
 }
 
 h1{
     color:#C8C8C8 ;
     font-size: 20px;
     cursor: pointer;
+
 }
 
 .wrap p{
     color: #434343;
-    text-align: center;
     
 }
 
@@ -30,5 +31,20 @@ footer{
     color: #434343;
 }
 
+
+
 /* 호버시 */
 
+.wrap img{
+    /* 포지션 값을 주었을떄는 위치값을 정해줘서 중양 정렬 시켜준다 . */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.4s;
+    }
+
+.img-hover:hover img{
+    opacity: 1;
+}
