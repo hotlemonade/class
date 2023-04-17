@@ -1,0 +1,121 @@
+*{
+    margin: 0; padding: 0;
+    font-family: sans-serif;
+}
+
+.wrap{
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box{
+    
+    display: flex;
+    gap: 20px;
+    width: 100vw;
+    
+}
+
+p{
+    color: white;
+}
+
+.info{
+    bottom: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20%;
+    text-align: center;
+    width: 1000px;
+}
+
+.info p{
+    color: #434343;
+    font-size: 30px;
+}
+
+
+
+
+/* 어사이드 */
+
+#contents-page{
+    color: aliceblue;
+}
+
+.box-sidebar,
+.box-contents{
+    outline: solid 1px red;
+    padding: 150px;
+    width: 100vw;
+    color: #434343; 
+    position: relative;
+}
+
+/* Left 어사이드 컨텐츠 */
+
+ul{
+    font-size: 20px;
+    
+}
+
+li{
+    
+    padding-top: 42px;
+    
+}
+
+.box-sidebar{
+    width: 100px;
+    flex-shrink: 0;
+    
+    
+}
+
+/* Right 어사이드 컨텐츠 */
+
+.kay-logo{
+    width: 200px;
+}
+
+
+/* 박스컨텐츠 내용 */
+
+/* relative 를 통해서 absolute를 가두고 싶은데 계속 relative 영역을 벗어난다. */
+
+
+/* Quiz 버튼 */
+.box-contents{
+    flex-grow: 1;
+    position: relative;
+    padding: 30px;
+    
+}
+
+.quiz1{
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    border: solid 2px #EFEFEF;
+    left: 50%;
+    transform: translate(-50%);
+    top: 31%;
+
+}
+
+.box-contents button{
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 50px;
+}
+
+.box-contents button:hover{
+    background-color:#595959 ;
+}
+
+
+
+
