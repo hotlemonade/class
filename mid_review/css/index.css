@@ -1,5 +1,6 @@
 *{
     font-family: sans-serif;
+    text-decoration-line:none;
 }
 
 .wrap{
@@ -14,7 +15,7 @@
 
 h1{
     color:#C8C8C8 ;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
 
 }
@@ -30,6 +31,15 @@ footer{
     font-size: 10px;
     color: #434343;
 }
+
+a:link {
+    color: white;
+}
+a:visited{
+    color: white;
+}
+
+
 
 
 

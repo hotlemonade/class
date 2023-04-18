@@ -7,31 +7,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/sample.css">
 </head>
-<body>
-    <iframe src="./header.html" class="gnb-wrap"></iframe>
-
+<body class="header-body">
+    <nav class="gnb">
+        <ul>
+            <li>홀 짝 맞추기</li>
+            <li id="contents-page">사다리타기</li>
+            <li>넌센스 퀴즈</li>
+            <li>특별 퀴즈</li>
+            <li>추첨</li>
+        </ul>
+    </nav>
     <main role="main" class="main-wrap">
         <div class="module-b container">
-            <!-- <img src="ladder.png" alt="ladder" class="ladder"> -->
+            
                
             <div class="btn-a">A</div>
             <div class="btn-b">B</div>
             
-            <div class="box-red">d</div>
-            <div class="box-gray">d</div>
+            <div class="box-red"></div>
+            <div class="box-gray"></div>
             <a href="b-2.html" class="ladder-hide">
-                Click
+               Click
             </a>
-            <!--
-                <div class="info">
-                    <p>A 혹은 B 상자를 선택하세요 붉은색의 상자를 맞추는 사람이 승리합니다.</p>
-                </div>
-
-            -->
+            
         </div>
         <p class="description">
-            A 혹은 B 상자를 선택하세요 붉은색의 상자를 맞추는 사람이 승리합니다.
+            사다리를 타서 붉은 상자에 도착하면 승리합니다.
         </p>
+
+        <audio src="./bgm-quiz.mp3" autoplay loop></audio>
     </main> 
    
 </body>
