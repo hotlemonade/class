@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="result.html">  
+        <input type="text" placeholder="전화번호 입력" required>
+        <input type="password">
+        <input type="search">
+        <input type="email">
+        <input type="url">
+        <input type="tel">
+        <p>좋아하는 과목을 고르세요</p>
+        <!-- 암묵적인 레이블 -->
+        <label><input type="checkbox" name="subject"> HTML</label>
+        <label><input type="checkbox" name="subject"> CSS</label>
+        <label><input type="checkbox" name="subject"> JAVASCRIPT</label>
+        <hr>
+
+        <!-- 명시적인 레이블 -->
+        <input type="radio" name="programing" id="prg_1"> <label for="prg_1">HTML</label>
+        <input type="radio" name="programing" id="prg_2"> <label for="prg_2">CSS</label>
+        <input type="radio" name="programing" id="prg_3"> <label for="prg_3">JAVASCRIPT</label>
+        <hr>
+        <input type="submit" value="완료" disabled> 
+    </form>
+
+    <form action="result.html" method="GET">
+        <fieldset>
+            <legend>검색</legend>
+            <input type="search" placeholder="검색어를 입력하세요" required>
+            <input type="submit" value="검색">
+        </fieldset>
+    </form>
+
+    <form action="./login.html" method="POST">
+        <fieldset>
+            <legend>로그인</legend>
+            <label for="user_id">ID</label>
+            <input type="text" id="user_id" placeholder="아이디를 입력하세요" required>
+
+            <label for="user_pw">PW</label>
+            <input type="password" id="user_pw" placeholder="PW" required>
+
+            <label><input type="checkbox">로그인 상태유지</label>
+            <input type="submit" value="로그인">
+        </fieldset>
+    </form>
+
+    select, button, textarea
+</body>
+</html>
