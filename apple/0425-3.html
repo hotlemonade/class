@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0; padding: 0;
+        }
+
+        div{
+            box-sizing: border-box;
+        }
+
         .main-background{
             width: 100%; height: 500px; background-image: url(./photo/teapot.JPG); background-size: contain; background-repeat: no-repeat; background-position: center; filter: brightness(70%) blur(70%); padding: 1px; text-align: center;
         }
@@ -15,7 +23,11 @@
         }
 
         .main-button{
-            padding: 10px; font-size: 20px; background-color: white; border: 0; border-radius: 10px; cursor: pointer; width: 100px; height: 70px; position: relative; left: 100px; top: 100px;
+            padding: 10px; font-size: 20px; background-color: white; border: 0; border-radius: 10px; cursor: pointer; width: 100px; height: 70px; position: relative; top: 355px; z-index: 10;
+        }
+
+        .explain-box{
+            margin: auto; width: 80%; max-width: 600px; padding: 20px; text-align: center; background-color:#eee; position: relative; top: -40px; z-index: 5; 
         }
     </style>
 </head>
@@ -23,6 +35,15 @@
     <div class="main-background">
         <h4 class="main-title">Buy Teapot</h4>
         <button type="button" class="main-button">buy</button>
+    </div>
+    <div class="explain-box">
+        <p>내용 설명.내용 설명.내용 설명.내용 설명.내용 설명.내용 설명.내용 
+            <br>설명.내용 설명.내용 설명.내용 설명.내용 설명.내용 설명.</p>
+    </div>
+        <br>
+    <div class="explain-box">
+        <p>내용 설명.내용 설명.내용 설명.내용 설명.내용 설명.내용 설명.내용 
+            <br>설명.내용 설명.내용 설명.내용 설명.내용 설명.내용 설명.</p>
     </div>
 </body>
 </html>
