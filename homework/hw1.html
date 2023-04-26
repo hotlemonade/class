@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        table {
+            border-collapse:collapse;
+        }
         .table-wrap {
             height: 100%;
             width: 700px;
@@ -41,6 +44,12 @@
             height: 30px;
             width: 300px;
         }
+
+        .table2 th, .table2 td {
+            border:1px solid #ddd;
+            padding:10px;
+        }
+ 
     </style>
 </head>
 
@@ -52,9 +61,9 @@
             <tr>
                 <th rowspan="2">성명</th>
                 <th>한글</th>
-                <td></td>
+                <td>&nbsp;</td>
                 <th>주민번호</th>
-                <td></td>
+                <td>&nbsp;</td>
                 <th rowspan="4">사진</th>
 
             </tr>
@@ -62,7 +71,7 @@
             <tr>
 
                 <th>영문</th>
-                <td></td>
+                <td>&nbsp;</td>
                 <th>전화번호</th>
                 <td></td>
 
@@ -70,15 +79,15 @@
 
             <tr>
                 <th colspan="2">e-mail</th>
-                <td></td>
+                <td>&nbsp;</td>
                 <th>휴대전화</th>
-                <td></td>
+                <td>&nbsp;</td>
 
             </tr>
 
             <tr>
                 <th colspan="2">주소</th>
-                <td colspan="3"></td>
+                <td colspan="3">&nbsp;</td>
 
 
             </tr>
@@ -96,11 +105,11 @@
 
             <tr>
 
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
 
             <tr>
@@ -210,6 +219,440 @@
             </tr>
         </table>
     </div>
+<!-- new  -->
+<input type="text" name="search" id="search">
+    <table class="table2" style="width:100%;">
+        <colgroup>
+            <col style="width:100px">
+            <col style="width:200px">
+            <col style="width:300px">
+            <col style="width:auto;" span="2">
+            <!-- <col style="width:calc( (100% - 100px) / 4)" span="4"> -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">TYPE</th>
+                <th scope="col" colspan="2" id="ns">NongSIM</th>
+                <th scope="col" colspan="2" id="lt">Lotte</th>
+            </tr>
+            <tr>
+                <th scope="col" id="ns_1">SHrimp</th>
+                <th scope="col" id="ns_2">Onion</th>
+                <th scope="col" id="lt_1">Chocopie</th>
+                <th scope="col" id="lt_2">Minipie</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="row" id="score">Score</th>
+                <td>30</td>
+                <td>30</td>
+                <td>30</td>
+                <td>30</td>
+            </tr>
+        </tfoot>
+        <tbody>
+
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="oil">Oil</th>
+                <td headers="ns ns_1 oil">3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+            <tr>
+                <th scope="row" id="na">Na..</th>
+                <td>3%</td>
+                <td>1%</td>
+                <td>3%</td>
+                <td>1%</td>
+            </tr>
+        </tbody>
+       
+    </table>
+
+
+    <table class="table1">
+        <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="2">농심</th>
+            
+        </tr>
+
+        <tr>
+            
+            <td>새우깡</td>
+            <td>양파링</td>
+        </tr>
+
+        <tr>
+            <th>지방</th>
+            <td>3%</td>
+            <td>1%</td>
+        </tr>
+
+        <tr>
+            <th>나트륨</th>
+            <td>2%</td>
+            <td>2%</td>
+        </tr>
+
+        <tr>
+            <th>점수</th>
+            <td>30</td>
+            <td>40</td>
+        </tr>
+    </table>
 </body>
 
 </html>
