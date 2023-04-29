@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        #wrap{
+            /* 화면 좌우 마진값 설정 */
+            width: 980px; margin: 0 auto; 
+        }
+
+        header{
+             height: 80px; background-color: #cccccc;
+        }
+
+        aside{
+            background-color: blanchedalmond; outline: 1px solid black; height: 300px; width: 200px; float: left;
+        }
+
+        nav{
+            background-color: aqua; width: 200px; height: 200px;
+        }
+
+        nav li{
+            padding-bottom: 5px; 
+        }
+
+        nav .div-padding{
+            outline: 1px solid tomato; height:200px;
+            width: 170px; margin: auto; 
+             
+            
+        }
+
+        main{
+            background-color: aquamarine;width: 780px; height: 300px; float: left;
+        }
+
+        footer{
+            height: 80px; clear: both; background-color: #cccccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>header</header>
+        <aside>
+            <nav>
+                <div class="div-padding">
+                    <ul>
+                        <li>오늘</li>
+                        <li>나의</li>
+                        <li>연습</li>
+                        <li>페이지</li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main>main</main>
+
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
