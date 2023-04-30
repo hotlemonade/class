@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        a + span {
+            color:red;
+        }
+
+        li + li + li + li{
+            color:blue;
+        }
+
+        .container div > span + span {
+            color:green;
+        }
+
+        div ~ span {
+            font-size:50px;
+        }
+
+        div + span {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>list <a href="#">Link</a><span>SPAN</span></li>
+            <li>list <a href="#">Link</a></li>
+            <li>list <a href="#">Link</a></li>
+            <li>list <a href="#">Link</a></li>
+        </ul>
+    </div>
+    <div>HELLO</div>
+    <span>SPAN</span>
+    <span>SPAN</span>
+    <span>SPAN</span>
+    <span>SPAN</span>
+
+    <div class="container">
+        <div>DIV</div>
+        <div> 
+            <span>SPAN 1</span>
+            <span>SPAN 2</span>
+        </div>
+        <div>
+
+            <p>
+                <span>SPAN 1</span>
+            <span>SPAN 2</span>
+            </p>
+        </div>
+        
+ 
+        
+    </div>
+    
+ 
+</body>
+</html>

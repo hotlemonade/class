@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        :root {
+            --blue : rgb(38, 126, 226);
+            --red : rgb(238, 78, 78);
+            --green : rgb(106, 185, 78);
+        }
+
+        body {
+            color:var(--red);
+            background-color:gold; 
+        }
+        #apple {
+            color:olive;/* ; 0 1 0 0; */
+        }
+
+        
+        div.wrap.b .container .box .btn .a .b .b .c {
+            color:red /* 0 0 9 1*/
+        }
+
+        div.a {
+            color:white /* 0 0 1 0 */
+        }
+       
+       .container .left > a {
+        background-color:red;
+       }
+
+       .container .left .wrap ul li a {
+        /* 0 0 3 3 */
+        font-size:30px;
+       }
+
+       .container .wrap a {
+        /* 0 0 2 1 */
+       }
+
+       div.container .left .wrap ul li a {
+        font-size: 40px;
+       }
+
+       p.p {
+        background-color:navy !important;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="left">
+            <header class="title">
+                <h2>title</h2>
+                <p class="p" style="background-color:red;color:#fff;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis quam sunt obcaecati ut cumque vel esse consectetur cupiditate! Magni dolores quia animi reprehenderit in vero voluptates eum ullam hic!
+                </p>
+            </header>
+            <div class="wrap">
+                <ul>
+                    <li>list <a href="#">Link</a></li>
+                    <li>list <a href="#">Link</a></li>
+                    <li>list <a href="#">Link</a></li>
+                    <li>list <a href="#">Link</a></li>
+                </ul>
+            </div>
+            <a href="#">Out link</a>
+        </section>
+    </div>
+    tag < class < id < inline style;
+    
+    tag :       0 0 0 1;
+    class :     0 0 1 0;
+    id :        0 1 0 0;
+    inline :    1 0 0 0;
+
+
+    <div class="wrap a b" id="apple">Hello World</div>
+    <p class="wrap">Paragraph</p>
+    <span class="a b">SPAN 1</span>
+    <span class="a">SPAN 2</span>
+
+    
+    
+ <!-- emmet, emit-->
+ <!-- ul>li.item*4 -->
+ <!-- lorem / lorem*3 -->
+ 
+</body>
+</html>

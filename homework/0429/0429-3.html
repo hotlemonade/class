@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        li:last-child { color:tomato}
+        li:first-child {color:olive}
+        ul:last-child { background-color:pink}
+        p:first-child { background-color:red;}
+        p:nth-child(3) { background-color:gold}
+        li:nth-child(odd) { background-color:beige}
+        li:nth-child(even) { background-color:rgb(192, 192, 148)}
+
+        .wrap p:first-of-type { font-size:50px; }
+        p:last-of-type { color:red;}
+        p:nth-of-type(2) { font-size:100px}
+        li:not(:nth-child(2)) { font-style:italic}
+        li:before {
+            content:'-';
+            margin-right:10px;
+        }
+
+        li:after {
+            content:'W';
+            font-size:0.5em;
+            margin-left:5px;
+        }
+    </style>
+</head>
+<body>
+300won
+    <div class="wrap"> 
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+        <p>1. Hello world</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+        <p>2. Hello world</p>
+        <p>3.Hello world</p>
+        <span>SPAN</span>
+    </div>
+         
+  
+    
+ 
+</body>
+</html>
