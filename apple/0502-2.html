@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box{
+            background-color: aqua; padding: 20px; color: white; border-radius: 5px; display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        알림창
+        <button onclick="document.getElementById('alert').style.display = 'none';">닫기</button>
+    </div>
+    <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+</body>
+</html>
