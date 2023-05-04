@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box;}
+        .container {
+            background-color:mediumseagreen; 
+            width: calc(400px - 6em);
+            height: 300px; 
+            margin: 100px auto;
+            padding: 3em; /* font-size */
+            box-sizing:content-box;
+        }
+        .wrap {
+            background-color:mediumseagreen; 
+            width: 400px;
+            height: 300px; 
+            margin: 100px auto;
+            padding: 3em; /* font-size */
+            border:10px solid #333; 
+        } 
+        .original {
+            background-color:tomato; 
+            width: 400px;
+            height: 50px; 
+            margin: 100px auto 20px; /* top, side, bottom*/
+            margin:0 30px 20px 3px; /* top, right, bottom, left */
+            margin-left:20px;
+            margin:0 0 0 20px;
+            margin:50px auto;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>HELLO</span>
+    </div>
+    <div class="original">
+        <span>original</span>
+    </div>
+    <div class="wrap">
+        <span>HELLO</span>
+    </div>
+</body>
+</html>

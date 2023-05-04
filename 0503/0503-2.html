@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box;}
+        :root {
+            --myred : maroon;
+        }
+        body {height:3000px;background-color:var(--myred);}
+        .container {
+            width:calc(100% - 40px);
+            margin:50px auto;
+            padding:200px 50px 50px;
+            /* background-color:mediumseagreen; 
+            background-image: url(../html/images/01.png);
+            background-repeat: no-repeat;
+            background-position: right 50px top 50px;
+            background-size: 80px; */
+
+            background: blue url(../html/images/dummy0.jpg) fixed center center/cover ;
+
+        } 
+        .banner {
+            height:200px;
+            /* background-color:tomato;
+            background-image:url('../html/images/slide_hor_0.jpg');
+            background-position: center center;
+            background-attachment:fixed; 
+            background-size:cover;*/
+
+            background:tomato url('../html/images/slide_hor_0.jpg') fixed center center/cover;
+        }
+       .multi {
+        height:400px;
+        width:90%;
+        margin:50px auto;
+        background-color:tomato;
+        background-image:url('../html/images/01.png'), url('../html/images/02.png');
+        background-position:10px 10px, right 10px top 10px;
+        background-size:50px auto;
+        background-repeat:no-repeat;
+       }
+
+       .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+       }
+
+       .btn {
+        outline:1px solid red;
+        width:50px;height:50px;
+        display: block;
+        background-image: url("../html/images/04.png");
+        background-size: contain;
+       }
+
+       .btn:hover{
+        background-image: url("../html/images/07.png");
+       }
+
+       .naver{
+        outline: 1px solid black;
+        width: 122px;
+        height: 28px;
+        display: block;
+        background-image: url("../html/images/naver-icon.png");
+        background-position: -527px -589px;
+        transition: 0.5s;
+       }
+
+       .naver:hover{
+        background-position: -651px -589px;
+        
+       }
+
+ 
+    </style>
+</head>
+<body>
+    /* inline : 크기를 가질 수  없다. 상하 마진과 상하 패딩을 가질 수  없다.*/
+    <a href="#" class="btn">
+        <span class="blind">HELLO</span>
+    </a>
+    
+    <div class="container">
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem voluptates sunt cum a explicabo iure dolorum blanditiis, suscipit corrupti? Possimus ad sit quod ullam eveniet numquam doloribus odio illo beatae?
+        </p>
+    </div>
+
+    <div class="banner">
+        Banner
+    </div>
+
+    <div class="multi">
+        Multi
+    </div>
+
+    <a href="#" class="naver">
+        <span class="blind">naver</span>
+    </a>
+    
+</body>
+</html>
