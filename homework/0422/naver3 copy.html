@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style> 
+        /* layout */
+
+        body{
+            background-color: #F6F6F7;
+        }
+        
+        .page-header {
+            padding-top:20px;
+            width:768px;
+            margin:0 auto; 
+            text-align:center;
+        }
+        .page-header .lang {
+            text-align:right;
+        }
+        
+
+        
+        
+        .page-header select, 
+        .join-container select
+         {
+            height:36px;
+            padding:8px;
+            border:1px solid #b9b9b9;
+            border-radius:2px;  
+        }
+
+
+        .join-container .input-wrap {
+            border:1px solid #b9b9b9;
+            border-radius:2px;  
+            height:36px;
+            background-color:#fff;
+        }
+
+
+
+        .page-header h1 img {
+            width:156px;
+        }
+
+        .join-container {
+            width:460px; 
+            margin:50px auto;
+        }
+
+        .join-container .full {
+            display:block;
+            width:100%;
+        }
+
+        .join-container li {
+            margin-bottom:20px;  
+        }
+
+        .join-container label {
+            font-weight:600;
+            font-size:14px;
+            display:block;
+            margin-bottom:8px;
+        }
+
+        .join-container strong {
+            font-size:12px; 
+            color:olivedrab;
+            display:none;
+        }
+
+        .join-container strong.active {
+            display:inline;
+        }
+
+        .join-container strong.warning {
+            color:rgb(195, 43, 43);
+        }
+
+        .join-container .btn-signup {
+            width:100%;
+            height:44px;
+            background-color:rgb(48, 176, 48);
+            color:#fff;
+            font-size:20px;
+            transition:0.4s;
+        }
+
+        .join-container .btn-signup:hover {
+            opacity:0.7;
+        }
+
+        .join-container .user-birth {
+            display:flex; 
+            column-gap:12px;
+        }
+
+        .join-container .user-birth > * {
+           /* flex-shrink:0;
+            flex-basis:calc(100% / 3); */
+            flex:1;
+        }
+
+         
+ 
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="lang">
+            <select>
+                <option>KOREAN</option>
+                <option>ENGLISH</option>
+            </select>
+        </div>
+       
+        <h1>
+            <a href="http://www.naver.com">
+                <img src="../naver/naver.png" alt="Home">
+            </a>
+        </h1>
+
+    </header>
+
+    <div class="join-container">
+        <form>
+            <fieldset>
+                <legend>Member Join</legend>
+
+                <ul>
+                    <li>
+                        <label for="user-id">ID</label>
+                        <div class="input-wrap">
+                            <input type="text" id="user-id" class="full" required>
+                        </div>
+                        <strong>Required info</strong>
+                    </li>
+                    <li>
+                        <label for="user-pw">Password</label>
+                        <div class="input-wrap">
+                            <input type="password" id="user-pw" class="full" required>
+                        </div>
+                        <strong>Required info</strong>
+                    </li>
+                    <li>
+                        <label for="user-birth">Birthday</label>
+                        <div class="user-birth" id="user-birth">
+                            <input type="text" placeholder="년(4자)">
+                            <select>
+                                <option>Month</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                             </select>
+                             <input type="text" placeholder="day">
+                        </div>
+                        <strong>Required info</strong>
+                    </li>
+                </ul>
+
+                <button type="button" class="btn-signup">SIGN UP</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        const valueCheck = () => {
+            const container = document.querySelector('.join-container');
+            const id = document.getElementById('user-id');
+            const pw = document.getElementById('user-pw')
+            const btn = container.querySelector('.btn-signup'); 
+
+            btn.addEventListener('click', ()=> {
+                
+                if( id.value !== '') {
+                    id.nextElementSibling.classList.remove('warning');
+                    id.nextElementSibling.classList.add('active')
+                } else {
+                    id.nextElementSibling.classList.add('active','warning');
+                }
+                
+            })
+        }
+
+        valueCheck();
+    </script>
+ 
+
+    <!-- <form action="" method="post">
+        
+            <p>아이디</p>
+        <div class="text-center">
+            <input type="text" placeholder="@naver.com">
+        </div>
+        
+            <p>비밀번호</p>
+        <div class="text-center">
+            <input type="password">
+        </div>
+        
+            <p>비밀번호 재확인</p>
+        <div class="text-center">
+            <input type="password">
+        </div>
+        
+            <p>이름</p>
+        <div class="text-center">
+            <input type="text">
+        </div>
+        
+        <p>생년월일</p>
+        <div class="input-birth-wrap">
+            <input type="text" placeholder="년(4자)" class="input-birth-1">
+            <input type="text" class="input-birth-2">
+            <input type="text" class="input-birth-3">
+        </div>
+        <div>
+            <p>성별</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>본인 확인 이메일(선택)</p>
+            <input type="text" placeholder="선택입력">
+        </div>
+        <div>
+        <p>휴대전화</p>
+            <input type="text" class="input-phone1">
+            <br>
+            <input type="text" placeholder="전화번호 입력" class="input-phone2">
+            <button class="phone-button">인증번호 받기</button>
+            <input type="text" placeholder="인증번호를 입력하세요">
+            
+            <br>
+            <input type="text">
+        </div>
+
+    </form> -->
+
+</body>
+</html>
