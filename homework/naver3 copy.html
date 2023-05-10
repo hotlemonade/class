@@ -24,7 +24,10 @@
         }
         
 
-        
+        input{
+            border: none;
+            height: 36px;
+        }
         
         .page-header select, 
         .join-container select
@@ -41,6 +44,21 @@
             border-radius:2px;  
             height:36px;
             background-color:#fff;
+            position: relative;
+        }
+
+        .join-container .input-wrap .lock-img{
+            position: absolute;
+            width: 20px;
+            right: 5px;
+            bottom: 7px;
+        }
+
+        .join-container .input-wrap .signin-img{
+            position: absolute;
+            width: 100px;
+            right: 5px;
+            bottom: 8px;
         }
 
 
@@ -123,7 +141,7 @@
        
         <h1>
             <a href="http://www.naver.com">
-                <img src="../naver/naver.png" alt="Home">
+                <img src="../homework/naver/naver.png" alt="Home">
             </a>
         </h1>
 
@@ -139,6 +157,7 @@
                         <label for="user-id">ID</label>
                         <div class="input-wrap">
                             <input type="text" id="user-id" class="full" required>
+                           <img src="./naver/스크린샷 2023-05-10 오후 4.50.55.png" alt="" class="signin-img">
                         </div>
                         <strong>Required info</strong>
                     </li>
@@ -146,6 +165,7 @@
                         <label for="user-pw">Password</label>
                         <div class="input-wrap">
                             <input type="password" id="user-pw" class="full" required>
+                            <img src="./naver/1828415.png" alt="" class="lock-img"> 
                         </div>
                         <strong>Required info</strong>
                     </li>
