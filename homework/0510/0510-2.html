@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            outline:1px solid red;
+            width:500px;
+            /* width:80%; */
+            height:200px;
+            margin:50px auto;
+            display:flex; 
+            justify-content:space-between;
+            flex-wrap:wrap;
+            /* align-items:center; */
+        }
+ 
+
+        .a { 
+            background-color:olive;
+            flex-basis:300px;
+            flex-shrink:0;
+
+            }
+        .b { background-color:tomato; 
+            /* flex-grow:1; */
+            flex-basis:200px; 
+        }
+        .c { 
+            background-color:goldenrod;
+            /* flex-grow:1; */
+            flex-basis:30%;
+        }
+
+        .d {
+            background-color:dodgerblue;
+            flex-basis:70%;
+        }
+        table {border-collapse:collapse; }
+        td {border:1px solid #ddd;
+        padding:20px;}
+
+        .table {
+            display:table;
+        }
+ 
+        .table .row {
+            display:table-row;
+        }
+
+        .table .cell {
+            display:table-cell;
+            border:1px solid #ddd;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </div>
+
+    <div class="table">
+        <div class="row">
+            <div class="cell">Birth-year</div>
+            <div class="cell">Birth-month</div>
+            <div class="cell">Birth-day</div>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <td>Birth-year</td>
+            <td>Birth-month</td>
+            <td>Birth-day</td>
+        </tr>
+    </table>
+</body>
+</html>
