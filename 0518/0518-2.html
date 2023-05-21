@@ -27,6 +27,7 @@
 
         .wrap h1{
             text-align: center;
+            margin-bottom: 30px;
         }
 
         .background-img{
@@ -45,6 +46,7 @@
 
         .background-img:hover { 
             box-shadow:10px 20px 10px rgba(0,0,0,0.3);
+            transform: scale(1.05);
         }
 
         .background-img:hover .contents {
@@ -66,6 +68,22 @@
             
         }
 
+        
+
+        .box img{
+            width: 30px;
+            padding: 15px;
+            margin-left: 170px;
+        }
+
+        .heart{
+            background-image: url(./Instagram-Heart-PNG-HD-Quality.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            
+
+        }
+
 
         .contents p{
             /* white-space: nowrap; */
@@ -85,10 +103,12 @@
         <ul>
             <li>
                 <a href="#" class="background-img"> 
+                    <div class="box"><img src="./Instagram-Heart-PNG-HD-Quality.png" alt=""></div>
                     <div class="contents">
                         <h2>Beautiful city</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor reiciendis ipsam non molestiae.</p>
                     </div>
+                    <div class="heart">fdsa</div>
                 </a>
             </li>
             <li>
