@@ -23,6 +23,7 @@
 
         .wrap ul li{
             flex-basis: calc((100% - 60px) / 4); 
+            position: relative;
         }
 
         .wrap h1{
@@ -80,8 +81,16 @@
             background-image: url(./Instagram-Heart-PNG-HD-Quality.png);
             background-size: 20px;
             background-repeat: no-repeat;
-            
+            background-position:center center;
+            position: absolute;
+            right: 10px;
+            top: 10px; 
+            width:24px;
+            height:24px;
+        }
 
+        button{
+            background-color: transparent;
         }
 
 
@@ -95,11 +104,26 @@
             -webkit-box-orient:vertical;
             transition:0.4s;
         }
+        h1 {
+            background-image:url('https://t1.daumcdn.net/daumtop_chanel/op/20230524112816463.png');
+            height:50px;
+            background-repeat:no-repeat;
+            background-position:center center;
+            background-size:100px auto;
+
+        }
+
+        .hide {
+            font-size:2px;
+            color:transparent;
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
-        <h1>Gallery</h1>
+        <h1>
+            <span class="hide">Gallery</span>
+        </h1>
         <ul>
             <li>
                 <a href="#" class="background-img"> 
@@ -108,7 +132,7 @@
                         <h2>Beautiful city</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor reiciendis ipsam non molestiae.</p>
                     </div>
-                    <div class="heart">fdsa</div>
+                    
                 </a>
             </li>
             <li>
@@ -118,6 +142,10 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor reiciendis ipsam non molestiae.</p>
                     </div>
                 </a>
+                <button class="heart">
+                    <span class="blind">Like</span>
+                </button>
+                    
             </li>
             <li>
                 <a href="#" class="background-img"> 
@@ -170,5 +198,7 @@
         </ul>
     </div>
     <!-- dsa -->
+
+    <a href=""></a>
 </body>
 </html>

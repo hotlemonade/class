@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width:500px;height:500px;
+            border:1px solid red;
+            margin:50px auto;
+            position:relative;
+        }
+
+        .box span {
+            background-color:gold;
+            right:50px;top:50px; /* offset */
+        }
+
+        .a {
+            position:relative; 
+        }
+        .b {
+            position:absolute; 
+            
+        }
+        .c {
+            position:fixed; 
+             
+        }
+
+        .e{
+
+        }
+        .f{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .g{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .h{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .i{
+            position: absolute;
+            bottom: -100px;
+            right: 50%;
+            
+        }
+
+        .wrap {
+            outline:1px solid red;
+            width:500px;
+            height:300px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <span class="a">A</span>
+        <span class="b">B</span>
+        <span class="c">C</span>
+        <span class="d">STATIC</span>
+    </div> -->
+
+
+    <div class="wrap">
+        <div class="e">E</div>
+        <div class="f">f</div>
+        <div class="g">g</div>
+        <div class="h">h</div>
+        <div class="i">i</div>
+    </div>
+</body>
+</html>
