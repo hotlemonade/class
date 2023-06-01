@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.wrap {
+    width:500px;
+    margin:50px auto;
+    outline:1px solid red;
+    overflow:hidden;
+    height:400px;
+    position:relative;
+}
+
+.wrap .car {
+    width:100px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    transition: 0.5s;
+}
+.wrap .car2 {
+    width:100px;
+    position:absolute;
+    left:0;
+    top:100px; 
+    /* animation-name:moveToRight;
+    animation-duration:1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: both; */
+    animation:moveToRight 1s alternate both;
+}
+
+.wrap .car{
+    animation: moveCircle 3s;
+}
+
+.wrap:hover .car{
+    animation-play-state: paused;
+}
+
+.wrap .title span{
+    display:inline-block;
+    font-size:50px;
+    animation: moveToBottom 1.5s 1 ease-out both;
+}
+
+ 
+.wrap .title span:nth-child(2) {
+    animation-delay:0.2s;
+}
+.wrap .title span:nth-child(3) {
+    animation-delay:0.4s;
+}
+.wrap .title span:nth-child(4) {
+    animation-delay:0.6s;
+}
+.wrap .title span:last-child {
+    animation-delay:0.8s;
+}
+
+
+
+@keyframes moveToRight {
+    0% { top:0;transform:translateX(0)}
+    100% { top:0;transform:translateX(400px)} 
+}
+
+@keyframes moveToBottom {
+    0% { transform: translateY(-80px);opacity:0;}
+    100% {transform:translateY(80px);opacity:1;}
+}
+
+@keyframes moveCircle{
+    0% {transform: translate(0,0);}
+    25% {transform: translate(300px, 0px);}
+    50% {transform: translate(300px,-300px );}
+    75% {transform: translate(0px, -300px);}
+    100% {transform: translate(0, 0);}
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">
+            <span>H</span>
+            <span>E</span>
+            <span>L</span>
+            <span>L</span>
+            <span>O</span>
+        </div>
+        <img src="/html/images/02.png" alt="" class="car"> 
+        <img src="/html/images/02.png" alt="" class="car2"> 
+    </div>
+</body>
+</html>
