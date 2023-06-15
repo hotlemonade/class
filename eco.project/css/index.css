@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.page-header .info{
+    border-bottom: 1px solid #eee;
+    padding: 14px 0;
+}
+
+.page-header .info p{
+    padding-left: 49px;
+    color: #4f6280;
+    width: 1280px;
+    margin: 0 auto;
+    background: url(../images/eg_logo.png) no-repeat left center;
+}
+
+.page-header .inner{
+    background-color:beige;
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.page-header  h1{
+    outline: 1px blue solid;
+}
+.page-header  .search{
+    outline: 1px green solid;
+    background: url(../images/ico_gnb_search.png) no-repeat ;
+    color: #0083cb;
+}
+
+.page-header  .banner{
+    outline: 1px red solid;
+}
+.page-header  .acc{
+    outline: 1px pink solid;
+}
