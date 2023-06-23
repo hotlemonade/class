@@ -41,3 +41,33 @@ body{
 .page-header  .acc{
     outline: 1px pink solid;
 }
+
+.page-header  .acc ul li{
+    display: inline;
+}
+
+.page-header  .acc .link1 li:first-child{
+    background-image: url(../images/ico_favorite.png);
+    background-repeat: no-repeat;
+}
+
+.page-header  .acc .link2 li:first-child{
+    background-image: url(../images/ico_sns_youtube.png);
+    background-repeat: no-repeat;
+}
+
+.page-header  .acc .link2 li:nth-child(2){
+    background-image: url(../images/ico_sns_instagram.png);
+    background-repeat: no-repeat;
+}
+
+.page-header  .acc .link2 li:nth-child(3){
+    background-image: url(../images/ico_sns_facebook.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
