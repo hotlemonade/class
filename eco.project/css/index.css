@@ -1,14 +1,27 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+@import url('https://cdn.jsdelivr.net/npm/material-icons@1.13.8/iconfont/material-icons.min.css');
+
 
 :root{
-    --primary:#0083cb
+    --primary:#0083cb;
+    --line:#d5d5d5;
 }
 
 body{
     font-size: 14px;
     line-height: 1.2;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+.base {
+    max-width:1280px;
+    width:100%;
+    margin: 0 auto;
+}
 
 .page-header .info{
     border-bottom: 1px solid #eee;
@@ -18,17 +31,13 @@ body{
 .page-header .info p{
     padding-left: 49px;
     color: #4f6280;
-    width: 1280px;
-    margin: 0 auto;
     background: url(../images/eg_logo.png) no-repeat left center;
 }
 
 .page-header .inner{ 
     display: flex;
     justify-content: space-between;
-    max-width:1280px;
-    width:100%;
-    margin: 0 auto;
+   
     align-items: center;
     padding: 20px 0;
 }
@@ -109,8 +118,8 @@ body{
 
  
 .page-header .gnb{
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
     
 }
 
@@ -127,23 +136,168 @@ body{
 }
 
 .page-header .gnb li{
-    border-left: 1px solid #d5d5d5;
+    border-left: 1px solid var(--line);
     text-align: center;
     flex-basis:192px;
 }
 
 .page-header .gnb li:last-child{
     flex-basis: 128px;
-    border-right:1px solid #d5d5d5;
+    border-right:1px solid var(--line);
 }
 
 .page-header .gnb a{
     display: block;
     padding: 16px 0;
+} 
+
+
+
+.gnb .icon:before {
+    font-family:'material icons';
+    content:'\e164'; 
+    font-size: 20px;
+    line-height:1;
+    position:relative;
+    top:2px;
+    margin-right:3px;
 }
 
+.visual-wrap{
+    background: url(../images/full_bg_forest.jpg) no-repeat center center/cover;
+    height: 700px;
+    padding: 50px 0px;
+    position: relative;
+}
 
+.visual-wrap > .base{
+    position: relative;
+    z-index: 2;
+}
 
+.visual-wrap .title{
+    font-size: 60px;
+    font-weight: 700;
+    color: #eee;
+    text-shadow: #4f6280 3px 3px 1px;
+}
+
+.banner-view{
+    width: 407px;
+    height: 519px;
+    background-color: #4f6280;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+
+.banner-container{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 30px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+    z-index: 1;
+    text-align: left;
+}
+
+ 
+.banner-list{
+    display: flex; 
+    column-gap:20px;
+    width:calc(100% - 407px);
+    justify-content:space-between;
+    
+}
+
+.banner-list li { 
+    flex-basis:calc( 100% / 3); 
+    overflow:hidden;
+}
+
+.banner-list li.active .line:before {
+    animation:barSize 2s both;
+}
+
+.banner-list li.active span{
+    color: white;
+
+}
+
+@keyframes barSize {
+    0% { width:0;}
+    100% { width:100%;}
+}
+
+.banner-list .line{
+    height: 2px;
+    /* background-color: #9eb861; */
+    background-color:rgba(255,255,255,0.5);
+    margin:10px 0 20px;
+}
+
+.banner-list .line:before{
+    content:'';
+    height: 2px;
+    width: 0;
+    background-color: #92b861;
+    display:block;
+}
+
+.banner-list span{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 1s ease-out;
+}
+
+.banner-list p{
+    white-space: nowrap; 
+    /* 줄바꿈 */
+    overflow:hidden;
+    /* 넘어가는 글을 줄여준다 */
+    text-overflow:ellipsis;
+    /* 넘어간 글을 ...으로 표시 */
+}
+
+.announce-wrap{
+    outline: 1px solid red;
+    display: flex;
+    justify-content:space-between;
+    column-gap: 30px;
+    margin-top: 70px;
+}
+
+.announce-wrap > div {
+    flex-basis:calc( 100% / 3);
+}
+
+.announce-wrap .board{
+    outline: 1px solid blue;
+}
+
+.announce-wrap .board h2{
+
+}
+
+.announce-wrap .policy{
+    outline: 1px solid pink;
+
+}
+
+.announce-wrap .policy .container{
+    outline: 1px solid pink;
+    background: url('../images/announce_poilcy_0.png') no-repeat center center/cover;  
+    height:249px;
+}
+
+.announce-wrap .minister{
+    outline: 1px solid green;
+}
 
 
 
