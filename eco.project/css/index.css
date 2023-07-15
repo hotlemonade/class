@@ -280,8 +280,11 @@ body{
     outline: 1px solid blue;
 }
 
-.announce-wrap .board h2{
-
+.announce-wrap .board > h2{
+    color: white;
+    background-color: blue;
+    height: 50px;
+    width:100px;
 }
 
 .announce-wrap .policy{
@@ -290,13 +293,79 @@ body{
 }
 
 .announce-wrap .policy .container{
-    outline: 1px solid pink;
     background: url('../images/announce_poilcy_0.png') no-repeat center center/cover;  
     height:249px;
 }
 
+.announce-wrap .policy > h2{
+    color: white;
+    background-color: green;
+    height: 50px;
+    width:100px;
+}
+
+.announce-wrap .policy ul{
+    display: flex;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    padding: 20px 20px 20px 80px;
+    column-gap: 16px;
+    row-gap: 10px;
+}
+
+.announce-wrap .policy li{
+    position:relative;
+}
+
+.announce-wrap .policy li::after{
+    content:'';
+    height: 10px;
+    width: 1px;
+    background-color: red;
+    display:block;
+    position: absolute;
+    right:-8px;
+    top: calc(50% - 5px);
+}
+
+.announce-wrap .policy  ul li:nth-child(3):after,
+.announce-wrap .policy  ul li:nth-child(7):after, 
+.announce-wrap .policy  ul li:nth-child(8):after {
+    display:none;
+}
+
+.announce-wrap .policy a::before{
+    content: '#';
+}
+
 .announce-wrap .minister{
     outline: 1px solid green;
+}
+
+.announce-wrap .minister > h2{
+    color: white;
+    background-color: lightblue;
+    height: 50px;
+    width:100px;
+}
+
+.announce-wrap .minister a{
+    position: relative;
+}
+
+.announce-wrap .minister img{
+    z-index: 1;
+}
+
+.announce-wrap .minister p{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    bottom: 5px;
+    z-index: 3;
 }
 
 
