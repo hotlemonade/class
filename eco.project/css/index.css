@@ -272,6 +272,15 @@ body{
     margin-top: 70px;
 }
 
+ .announce-wrap .board li {
+    height:250px;
+ }
+
+.announce-wrap .container img {
+    height:100%;
+    width:100%;
+}
+
 .announce-wrap > div {
     flex-basis:calc( 100% / 3);
 }
@@ -280,12 +289,33 @@ body{
     outline: 1px solid blue;
 }
 
-.announce-wrap .board > h2{
+.announce-wrap h2 {
+    position:relative;
     color: white;
-    background-color: blue;
     height: 50px;
+    line-height:50px;
     width:100px;
+    text-align:center;
+    border-radius:10px 10px 0 0;
 }
+
+.announce-wrap h2:after {
+    content:'';
+    position:absolute;
+    width:57px;
+    height:57px;
+    background-color:gray;
+    right:-20px;
+    top:0;
+    display:block;
+    border-radius:0 10px;
+    transform:rotate(-57deg);
+    z-index:-1;
+}
+.announce-wrap .board > h2{
+    background-color: rgb(3, 72, 142);
+}
+
 
 .announce-wrap .policy{
     outline: 1px solid pink;
@@ -294,14 +324,14 @@ body{
 
 .announce-wrap .policy .container{
     background: url('../images/announce_poilcy_0.png') no-repeat center center/cover;  
-    height:249px;
+    height:250px;
 }
 
 .announce-wrap .policy > h2{
-    color: white;
+    
     background-color: green;
-    height: 50px;
-    width:100px;
+    
+    
 }
 
 .announce-wrap .policy ul{
@@ -313,8 +343,26 @@ body{
     row-gap: 10px;
 }
 
+
 .announce-wrap .policy li{
     position:relative;
+}
+
+ 
+.announce-wrap .policy li::before{
+    content:'';
+    height: 10px;
+    width: 0;
+    background-color: yellow;
+    display: block;
+    position: absolute;
+    top: 10px;  
+    transition: 0.5s;
+}
+
+.announce-wrap .policy li:hover:before{
+    width: 100%;
+    
 }
 
 .announce-wrap .policy li::after{
@@ -334,19 +382,24 @@ body{
     display:none;
 }
 
+.announce-wrap .policy a{
+    position:relative;
+}
+
 .announce-wrap .policy a::before{
     content: '#';
 }
 
-.announce-wrap .minister{
-    outline: 1px solid green;
+.announce-wrap .minister li{
+   height:250px;
 }
 
+
+
 .announce-wrap .minister > h2{
-    color: white;
+    
     background-color: lightblue;
-    height: 50px;
-    width:100px;
+    
 }
 
 .announce-wrap .minister a{
@@ -367,6 +420,23 @@ body{
     bottom: 5px;
     z-index: 3;
 }
+
+.news h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 700;
+
+}
+
+.table-iteam ul{
+    display: flex;
+    column-gap:20px;
+}
+
+
+
+
 
 
 
