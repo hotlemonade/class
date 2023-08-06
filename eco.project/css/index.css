@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 @import url('https://cdn.jsdelivr.net/npm/material-icons@1.13.8/iconfont/material-icons.min.css'); 
+/* @import url('./banner.css'); */
 
 
 :root{
@@ -612,6 +613,60 @@ body{
  }
 
 
+ .banners-wrap{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+ }
+
+ .air-info{
+    outline: 1px red solid;
+    flex-basis: 562px;
+ }
+
+ .links{
+    outline: 1px blue solid;
+    flex: 1;
+ }
+
+ .links li{
+    width: 322px;
+    height: 90px;
+    padding: 30px 0 0 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: #4d5360 0px 0px 10px 0px;
+ }
+
+ .links li :nth-child(1){
+    display: block;
+    height: 100%;
+
+ }
+
+ .company-info{
+    display: flex;
+    flex-wrap: wrap;
+    height: 248px;
+ }
+
+ .company-info li{
+    outline: 1px red solid;
+    height: 155px;
+    width: 148px;
+    
+ }
+
+.company-info{
+    display: flex;
+}
+
+ .company-info{
+    outline: 1px green solid;
+    flex-basis: 310px;
+ }
+
+
 .footer-gnb{
     background-color:#4d5360;
 }
@@ -661,3 +716,22 @@ body{
 
 
 
+
+.flex-box {
+    width:500px;margin:50px auto;
+    outline:1px solid red;
+    display:flex; 
+}
+
+.flex-box .a {
+    background-color:olive;
+    flex:0 1  250px;
+}
+.flex-box .b {
+    background-color:tomato;
+    flex:0 1 250px;
+}
+.flex-box .c {
+    background-color:dodgerblue;
+    flex:0 1 250px;
+}

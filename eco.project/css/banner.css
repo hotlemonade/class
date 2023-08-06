@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+.banners-wrap{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+ }
+
+ .air-info{
+    outline: 1px red solid;
+    flex-basis: 562px;
+ }
+
+ .links{
+    outline: 1px blue solid;
+    flex: 1;
+ }
+
+ .company-info{
+    outline: 1px green solid;
+    flex-basis: 310px;
+ }
