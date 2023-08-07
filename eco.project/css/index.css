@@ -647,13 +647,14 @@ body{
  .company-info{
     display: flex;
     flex-wrap: wrap;
-    height: 248px;
+    
  }
 
  .company-info li{
     outline: 1px red solid;
     height: 155px;
     width: 148px;
+    
     
  }
 
