@@ -629,44 +629,89 @@ body{
     flex: 1;
  }
 
- .links li{
-    width: 322px;
-    height: 90px;
-    padding: 30px 0 0 100px;
+ .links li{ 
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: #4d5360 0px 0px 10px 0px;
  }
 
- .links li :nth-child(1){
-    display: block;
-    height: 100%;
+ .links li a{
+    padding:0 0 0 100px;
+    display: flex;
+    /* display: flex 를 로 만들어 준후 align-items: center를 이용하여 중앙정렬 시켜준다. */
+    align-items: center;
+    height: 90px;
+    background: no-repeat 30px center; 
+ }
 
+ .links li:nth-child(1) a{
+    background-image: url(../images/links_1.png)
+ }
+ .links li:nth-child(2) a{
+    background-image: url(../images/links_2.png)
+ }
+ .links li:nth-child(3) a{
+    background-image: url(../images/links_3.png)
  }
 
  .company-info{
     display: flex;
     flex-wrap: wrap;
-    
- }
-
- .company-info li{
-    outline: 1px red solid;
-    height: 155px;
-    width: 148px;
-    
-    
- }
-
-.company-info{
-    display: flex;
-}
-
- .company-info{
     outline: 1px green solid;
     flex-basis: 310px;
  }
 
+ .company-info li{
+    flex-basis: 50%; 
+    /* 아이템의 크기를 설정할때는 flex-basis를 사용해준다.
+    flex-basis는 flex인 경우에만 사용이 가능하다. */
+ }
+
+ .company-info li a{
+    display: flex;
+    /* a 테그에 flex를 해주는 이유는 내용의 상하정렬을 위해서 하는 것 이다.
+    align-items: center; 를 이용해 주기 위해서 */
+    background-color: pink;
+    height: 100%;
+    /* height 100%를 이용하여 부모 높이를 상속 받아 a 의 영역을 꽉 채워준다. */
+
+ }
+
+ .company-info li:nth-child(1){
+    border: grey 1px solid;
+    border-width: 0 1px 1px 0;
+    /* border-width 는 상, 우, 하, 좌 의 순서로 border를 표시할 수 있습니다 */
+    
+ }
+
+ .company-info li:nth-child(4){
+    border: grey 1px solid;
+    border-width: 1px 0 0 1px;
+ }
+
+ .company-info li a{
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    background: no-repeat 30px center;
+    /* backgroind: no-repeat을 이용하여 반복을 중단 시키고 center를 사용하여 중앙 정렬 시켜준다 */
+ }
+
+ .company-info li:nth-child(1) a{
+    background-image: url(../images/info_1.png);
+ }
+ 
+ .company-info li:nth-child(2) a{
+    background-image: url(../images/info_2.png);
+ }
+ 
+ .company-info li:nth-child(3) a{
+    background-image: url(../images/info_3.png);
+ }
+ 
+ .company-info li:nth-child(4) a{
+    background-image: url(../images/info_4.png);
+ }
 
 .footer-gnb{
     background-color:#4d5360;
@@ -675,7 +720,6 @@ body{
 .footer-gnb ul{
     display: flex;
     justify-content: space-between;
-    
     width: 100%;
     height: 55px; 
 }
@@ -706,7 +750,9 @@ body{
 }
 
 
-
+footer {
+    display:none;
+}
 
 
 

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.base {
+    max-width: 1280px;
+    /* 최대로 커지는 규격 사이즈를 1280px로 한정 시킨다. */
+    width: 100%;
+    margin: 0 auto;
+    /* margin 0(상하)auto(좌우 마진 값을 auto로 설정하며 좌우 간격의 마진을 일정한 수치로 가지게 한다. */
+}
+
+.announce-wrap{
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-between은 아이템들의 사이의 간격을 균일하게 설정해주는 값이다. */
+    
+}
+
+.announce-wrap img{
+    width: 100%;
+    height: 100%;
+}
+
+.announce-wrap > div{
+    flex-basis: calc(100% / 3);
+    /* flex-basis는 flex 아이템의 기본 크기를 설정합니다. */
+}
+
+.board li{
+    height: 250px;
+}
+
+.announce-wrap h2{
+    position: relative;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    /* line-height는 텍스트와의 줄 간격을 설정하는 값이다. */
+    width: 100px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.announce-wrap .board > h2{
+    background-color: rgb(3, 72, 142);
+}
+
+.announce-wrap .board h2:after {
+    /* after의 값은 부모 다음으로 아이템(텍스트 등)을 생성할 수 있다. */
+    content: '';
+    /* after를 이용하기 위해서는 content:''; 를 기본적으로 넣어줘야 한다. */
+    position: absolute;
+    /* position: absolute를 넣어준 이유는 위 상단의 board 상자를 부모로 지정하기 위해서다. */
+    width: 38px;
+    height: 73px;
+    background-color: rgb(3, 72, 142);
+    right: -20px;
+    /* 위치조정 */
+    top: 0;
+    display: block;
+    border-radius: 0 10px;
+    transform: rotate(319deg);
+    z-index: -1;
+    /* z-index를 활용해주며 상자를 사진 뒷편으로 보내준다. */
+}
+
+.announce-wrap .policy .container{
+    background: url(../images/announce_poilcy_0.png) no-repeat center center/cover;
+    height: 250px;
+}
+
+.announce-wrap .policy > h2{
+    background-color: green;
+}
+
+.announce-wrap .policy h2:after{
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 73px;
+    background-color: green;
+    right: -20px;
+    top: 0;
+    display: block;
+    border-radius: 0 10px;
+    transform: rotate(319deg);
+    z-index: -1;
+}
+
+.announce-wrap .policy ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
