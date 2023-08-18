@@ -149,8 +149,6 @@ body{
     padding: 16px 0;
 } 
 
-
-
 .gnb .icon:before {
     font-family:'material icons';
     content:'\e164'; 
@@ -417,9 +415,6 @@ body{
 .announce-wrap .minister li{
    height:250px;
 }
-
-
-
 
 
 .announce-wrap .minister a{
