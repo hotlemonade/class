@@ -68,7 +68,7 @@ body{
 .page-header .gnb li{
     border-left: 1px solid lightgray;
     text-align: center;
-    flex-basis: 192px;
+    flex-basis: 20%;
     
 }
 
@@ -160,10 +160,27 @@ body{
 .banner-list li{
     outline: 1px red solid;
     flex-basis: calc(100% / 3);
-    /* 100%에서 3을 나누어 준다 */
-    /* flex-basis는 해당 아이템의 너비를 균일하게 설정해준는 명령어다. */
     overflow: hidden;
     /* 넘어가는 문장들을 가려준다 */
+    /* 100%에서 3을 나누어 준다 */
+    /* flex-basis는 해당 아이템의 너비를 균일하게 설정해준는 명령어다. */
+    
+    
+}
+
+.banner-list li a{
+    outline: 1px blue solid;
+    display: block;
+    /* a 태그는 인라인 요소이기 떄문에 크기를 가지지 못 한다. 그러기에 display를 block으로 변경하면서 a 태그에 크기를 만들어준다. */
+
+}
+
+.banner-list li p{
+    white-space: nowrap;
+    /* 문장 넘어감을 방지해준다. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 넘어간 문장 뒤에 .. (말줄임) 표시 해준다. */
 }
 
 .banner-list .line{
@@ -182,10 +199,14 @@ body{
     background-color:  #92b861;
     display: block;
     position: absolute;
+    left: 0;
+    top: 0;
+    /* left 그리고 top 위치를 설정을 해줘야지 다른 디바이스에서도 그 위치를 유지한다.(초록색선) */
     transition: 0.2s;
 }
 
-.banner-list .line:hover::before{
+.banner-list li a:hover .line::before{
+    /* li에 a를 호버시 .line::before이 width: 100%로 만들어 줘라. */
     width: 100%;
 }
 
@@ -290,4 +311,39 @@ body{
     border-radius: 0 10px;
     transform: rotate(319deg);
     z-index: -1;
+}
+
+.news h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.tap-container{
+    display: flex;
+    position: relative;
+}
+
+.tap-box{
+    height:200px;
+    background-color:#f3f3f3;
+    border:1px solid #d8d8d8;
+}
+
+.tab-container li:not(:last-child) a {
+    border-right:1px solid #d8d8d8;
+}
+
+.tap-container button{
+    height: 50px;
+    font-weight: 100px;
+}
+
+.tap-container button .active{
+    background-color: blue;
+}
+
+.tab-contents{
+    display: ;
 }
