@@ -669,7 +669,6 @@ body{
     outline: 1px blue solid;
     height: 100%;
     padding-left: 15px;
-    
  }
 
  .air-container ul li a{
@@ -697,6 +696,12 @@ body{
     display:none;
     width: 387px;
     /* 곂쳐있는 표를 하나만 표시시킨다 */
+ }
+
+ .air-container ul .on .air-contents tr{
+    display: flex;
+    justify-content: space-around;
+    
  }
 
  .links{
