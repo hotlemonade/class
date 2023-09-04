@@ -151,5 +151,58 @@ header .line{
     width: 100%;
     background: black;
     text-align: center;
+    margin-bottom: 70px;
 }
+
+footer .announce-line{
+    border-top: #2f2f2f 1px solid;
+    border-bottom: #2f2f2f 1px solid;
+    height: 50px;
+}
+
+footer .announce .info{
+    display: flex;
+    column-gap: 30px;
+    position: relative;
+    top: 13px;
+    color: #a5a5a5;
+    font-size: 18px;
+}
+
+footer .announce .info li:nth-child(2){
+    font-size: 14px;
+    /* 중앙 정렬 하는법을 알아야한다. */
+}
+
+footer .announce .arrow{
+    position: absolute;
+    right: 0px;
+    top: -13px;
+    /* 정확한 중앙정렬 법을 알자. */
+    /* 좌우 선 만드는법 */
+}
+
+footer .footer-gnb ul{
+    display: flex;
+    color: #717171;
+    column-gap: 50px;
+    font-size: 14px;
+    margin: 10px auto;
+    /* flex 시 중앙정렬을 맞추고 싶다. */
+    
+}
+
+footer .footer-gnb ul li:hover{
+    color: lightskyblue;
+}
+
+footer .footer-gnb p{
+    font-size: 12px;
+    margin-top: 20px;
+    color: #717171;
+    margin-bottom: 100px;
+}
+
+
+
 
