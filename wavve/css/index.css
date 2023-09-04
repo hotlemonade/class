@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    background-color: #1b1b1b;
+    font-size: 20px;
+}
+
+.base{
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-top{
+    margin: 14px auto;
+    font-size: 12px;
+    color: #a5a5a5;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 16px;
+}
+
+.header-top li{
+    position: relative;
+}
+
+.header-top li::after{
+    content: '';
+    height: 10px;
+    width: 1px;
+    background-color: #2f2f2f;
+    display: block;
+    position: absolute;
+    right: 38px;
+    top: calc(50% - 5px);
+}
+
+.header-top li:nth-child(1):after{
+    display: none;
+}
+
+.header-top li:nth-child(3):after{
+    right: 52px;
+}
+
+.header-top li:nth-child(4):after{
+    right: 49px;
+}
+
+header .line{
+    border: 1px solid #2f2f2f;
+    width: 100%;
+}
+
+.header-gnb{
+    margin: 28px auto;
+    display: flex;
+    column-gap: 120px;
+    
+}
+
+.header-gnb ul{
+    color: #a5a5a5;
+    display: flex;
+    column-gap: 40px;
+    
+}
+
+.header-gnb ul li{
+    /* 왜 자연스러운 호버가 안들거 가는걸까? */
+    transition:color 1s ease-in;
+}
+
+.header-gnb ul li a:hover{
+    color: white;
+}
+
+.header-gnb ul li:nth-child(1){
+    color: white;
+}
+
+.banner{
+    margin-bottom: 100px;
+}
+
+.banner-img{
+    outline: 1px solid black;
+    border-radius: 10px;
+}
+
+.selection-title{
+    font-size: 24px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.selection-title li:nth-child(2){
+    font-size: 16px;
+    color: #a5a5a5;
+}
+
+.selection-img{
+    display: flex;
+    justify-content: space-between;
+    height: 440px;
+}
+
+.selection-img img{
+    border-radius: 10px;
+    width: 240px;
+    height: 360px;
+}
+
+.selection-coming-img{
+    display: flex;
+    column-gap: 10px;
+    height: 356px;
+}
+
+.coming-img-title{
+    color: #a5a5a5;
+    font-size: 16px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.coming-img-title p:nth-child(2){
+    font-size: 14px;
+    margin-top: 4px;
+    
+}
+
+.selection-coming-img .coming-img-title img{
+    height: 34px;
+    width: 34px;
+}
+
+.selection-coming img{
+    width: 406px;
+    height: 229px;
+    border-radius: 10px;
+}
+
+.advertise{
+    height: 96px;
+    width: 100%;
+    background: black;
+    text-align: center;
+}
+
