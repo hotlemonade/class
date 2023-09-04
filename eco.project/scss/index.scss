@@ -1,0 +1,904 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+@import url('https://cdn.jsdelivr.net/npm/material-icons@1.13.8/iconfont/material-icons.min.css'); 
+/* @import url('./banner.css'); */
+
+@import 'reset','banner';
+
+:root{
+    --primary:#0083cb;
+    --line:#d5d5d5;
+}
+
+body{
+    background-color:blue;
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.base {
+    max-width:1280px;
+    width:100%;
+    margin: 0 auto;
+}
+
+.page-header { 
+    .info{
+        border-bottom: 1px solid #eee;
+        padding: 14px 0;
+
+        p{
+            padding-left: 49px;
+            color: #4f6280;
+            background: url(../images/eg_logo.png) no-repeat left center;
+        }
+    }
+    .inner{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .search{
+        border: 2px solid var(--primary);
+        border-radius: 24px;
+        padding: 10px 20px;
+        input{
+            border: none;
+            width: 270px;
+        }
+         
+        button{
+          
+           background: url(../images/ico_gnb_search.png) no-repeat ;
+           height: 24px;
+           color: var(--primary);
+           padding-left: 24px;
+        }
+    }
+    .banner a{
+        margin-right: 30px;
+        
+    }
+    .acc{
+        outline: 1px pink solid;
+        .link1 li:first-child{
+            background-image: url(../images/ico_favorite.png);
+            background-repeat: no-repeat;
+        }
+    }
+
+    .sns {
+        font-size:1px;
+        color:transparent;
+        display:flex;
+        column-gap:15px;
+        li {
+           width:24px;
+           &:first-child {
+            a {
+                background-image:url(../images/ico_sns_youtube.png);
+            }
+           }
+
+           &:nth-child(2) a {
+            background-image:url(../images/ico_sns_youtube.png);
+            }
+            &:nth-child(3) a {
+                background-image:url(../images/ico_sns_youtube.png);
+            }
+            &:nth-child(4) a {
+                background-image:url(../images/ico_sns_youtube.png);
+            }
+            &:nth-child(5) a {
+                background-image:url(../images/ico_sns_youtube.png);
+            }
+            &:last-child a {
+                background-image:url(../images/ico_sns_youtube.png);
+            }
+        
+        }
+        a {
+            outline:1px solid red;
+            background:no-repeat center center/contain;
+            display:block;
+            height:24px;
+           
+        }
+    }
+
+
+.gnb{
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    
+    ul{ 
+        display: flex;
+        justify-content: space-between;
+        max-width:1280px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 18px;
+        font-weight: 500;
+        
+    }
+    li{
+        border-left: 1px solid var(--line);
+        text-align: center;
+        flex-basis:192px;
+        &:last-child{
+            flex-basis: 128px;
+            border-right:1px solid var(--line);
+        }
+    }
+    a{
+       display: block;
+       padding: 16px 0;
+    } 
+    .icon:before {
+        font-family:'material icons';
+        content:'\e164'; 
+        font-size: 20px;
+        line-height:1;
+        position:relative;
+        top:2px;
+        margin-right:3px;
+    }
+}
+    
+}
+ 
+  
+
+.visual-wrap{
+    background: url(../images/full_bg_forest.jpg) no-repeat center center/cover;
+    height: 700px;
+    padding: 50px 0px;
+    position: relative;
+
+    & > .base {
+        position: relative;
+        z-index: 2;
+    }
+    .title{
+        font-size: 60px;
+        font-weight: 700;
+        color: #eee;
+        text-shadow: #4f6280 3px 3px 1px;
+    }
+}
+
+ 
+
+
+.banner-view{
+    width: 407px;
+    height: 519px;
+    background-color: #4f6280;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+
+.banner-container{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 30px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+    z-index: 1;
+    text-align: left;
+}
+
+ 
+.banner-list{
+    display: flex; 
+    column-gap:20px;
+    width:calc(100% - 407px);
+    justify-content:space-between;
+
+    li {
+        flex-basis:calc( 100% / 3); 
+        overflow:hidden;
+
+        &.active {
+            .line:before {
+                animation:barSize 2s both;
+            }
+
+            span {
+                color: white;
+            }
+        }
+    }
+    
+}
+
+ 
+
+@keyframes barSize {
+    0% { width:0;}
+    100% { width:100%;}
+}
+
+.banner-list .line{
+    height: 2px;
+    /* background-color: #9eb861; */
+    background-color:rgba(255,255,255,0.5);
+    margin:10px 0 20px;
+}
+
+.banner-list .line:before{
+    content:'';
+    height: 2px;
+    width: 0;
+    background-color: #92b861;
+    display:block;
+}
+
+.banner-list span{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 1s ease-out;
+}
+
+.banner-list p{
+    white-space: nowrap; 
+    /* 줄바꿈 */
+    overflow:hidden;
+    /* 넘어가는 글을 줄여준다 */
+    text-overflow:ellipsis;
+    /* 넘어간 글을 ...으로 표시 */
+}
+
+.announce-wrap{
+    display: flex;
+    justify-content:space-between;
+    column-gap: 30px;
+    margin-top: 70px;
+
+    .board li {
+        height:250px;
+     }
+
+     .container img {
+        height:100%;
+        width:100%;
+    }
+
+    & > div {
+        flex-basis:calc( 100% / 3);
+    }
+
+    h2 {
+        position:relative;
+        color: white;
+        height: 50px;
+        line-height:50px;
+        width:100px;
+        text-align:center;
+        border-radius:10px 10px 0 0;
+    }
+
+    .board {
+        h2 {
+            background-color: rgb(3, 72, 142);
+            &:after {
+                content:'';
+                position:absolute;
+                width:38px;
+                height:73px;
+                background-color: rgb(3, 72, 142);
+                right:-20px;
+                top:0;
+                display:block;
+                border-radius:0 10px;
+                transform:rotate(319deg);
+                z-index:-1;
+            }
+        }
+    }
+
+ 
+
+    .policy h2:after {
+        content:'';
+        position:absolute;
+        width:38px;
+        height:73px;
+        background-color:green;
+        right:-20px;
+        top:0;
+        display:block;
+        border-radius:0 10px;
+        transform:rotate(319deg);
+        z-index:-1;
+    }
+
+    .policy > h2{
+        background-color: green;
+    }
+
+    .minister h2:after {
+        content:'';
+        position:absolute;
+        width:38px;
+        height:73px;
+        background-color:lightblue;
+        right:-20px;
+        top:0;
+        display:block;
+        border-radius:0 10px;
+        transform:rotate(319deg);
+        z-index:-1;
+    }
+
+    .minister > h2{
+        background-color: lightblue;
+    }
+}
+
+
+
+
+
+
+
+.announce-wrap 
+
+
+
+
+.announce-wrap .policy .container{
+    background: url('../images/announce_poilcy_0.png') no-repeat center center/cover;  
+    height:250px;
+}
+
+
+
+.announce-wrap .policy ul{
+    display: flex;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    padding: 20px 20px 20px 80px;
+    column-gap: 16px;
+    row-gap: 10px;
+}
+
+
+.announce-wrap .policy li{
+    position:relative;
+}
+
+ 
+.announce-wrap .policy li::before{
+    content:'';
+    height: 10px;
+    width: 0;
+    background-color: yellow;
+    display: block;
+    position: absolute;
+    top: 10px;  
+    transition: 0.5s;
+}
+
+.announce-wrap .policy li:hover:before{
+    width: 100%;
+    
+}
+
+.announce-wrap .policy li::after{
+    content:'';
+    height: 10px;
+    width: 1px;
+    background-color: red;
+    display:block;
+    position: absolute;
+    right:-8px;
+    top: calc(50% - 5px);
+}
+
+.announce-wrap .policy  ul li:nth-child(3):after,
+.announce-wrap .policy  ul li:nth-child(7):after, 
+.announce-wrap .policy  ul li:nth-child(8):after {
+    display:none;
+}
+
+.announce-wrap .policy a{
+    position:relative;
+}
+
+.announce-wrap .policy a::before{
+    content: '#';
+}
+
+.announce-wrap .minister li{
+   height:250px;
+}
+
+
+.announce-wrap .minister a{
+    position: relative;
+}
+
+.announce-wrap .minister img{
+    z-index: 1;
+}
+
+.announce-wrap .minister p{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    bottom: 5px;
+    z-index: 3;
+}
+
+.news h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 700;
+
+}
+
+
+/* Tab menu */
+.tab-container {
+    display: flex;
+    position:relative;
+}
+
+.tab-box {
+    height:200px;
+    background-color:#f3f3f3;
+    border:1px solid #d8d8d8;
+}
+ 
+
+.tab-container li:not(:last-child) a {
+    border-right:1px solid #d8d8d8;
+}
+
+.tab-container button {
+    height: 50px;
+    width: 100px;
+}
+.tab-container button.active {
+    background-color:dodgerblue;
+    color:#fff;
+}
+
+.tab-container button.active + .tab-contents {
+    display:block;
+}
+ 
+
+.tab-contents{ 
+    display:none;
+    position:absolute;
+    left:0;
+    top:50px;
+    height:200px;
+}
+
+.tab-contents ul{
+    display: flex; 
+}
+
+.tab-contents li {
+    padding:55px 0; 
+}
+
+
+.tab-contents a{
+    display: block;
+    padding: 0 20px;
+}
+
+.tab-contents .press {
+    /* width: 60px;
+    height: 30px; */
+    background-color: lightblue;
+    display:inline-block;
+    margin-bottom:10px;
+    position:relative;
+    padding:10px 20px;
+}
+
+.tab-contents .press:after{
+    content:'';
+    position:absolute;
+    width:0;height:0; 
+    left:0;bottom:-14px;
+    display:block;
+    border: 14px solid red;
+    border-color:transparent transparent transparent lightblue;
+}
+
+.tab-contents p {
+    font-weight: 700;
+}
+
+.tab-contents time span{
+    font-size: 5px;
+}
+
+.data-wrap{
+    display: flex;
+    column-gap: 30px;
+    margin: 50px auto;
+}
+
+.data-wrap h2 {
+    font-size: 26px;
+    margin-bottom:10px;
+    letter-spacing:-1.1px;
+}
+
+.data-wrap img {
+    height:350px;
+}
+
+.data-wrap a{
+    display: block;
+    border-radius:7px;
+    overflow: hidden;
+}
+
+
+.data-title ul{
+    display: flex;
+    column-gap: 30px;
+}
+
+.data-title-video a{
+    position: relative;
+}
+
+.data-title-video a:before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition:0.4s;
+}
+
+.data-title-video a:hover:before {
+    background-color:transparent;
+}
+
+.data-title-video a:hover:after {
+    
+    box-shadow:0 0 20px rgba(0,0,0,0.7);
+    background-color:#fff;
+    color:red;
+}
+
+.data-title-video a::after{
+    content: '\e5df';
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    background-color: rgba(255,255,255,0.8);
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    font-size: 70px;
+    align-items: center;
+    transition:0.4s;
+    justify-content: center;
+    
+ }
+
+ .test {
+     
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 400,
+  'opsz' 48
+ 
+ }
+
+
+ .banners-wrap{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+ }
+
+ .air-info{
+    display: flex;
+    /* air-info를 flex 주는 이유는 자식의 header 와 air-container를 떨어트리기 위해서다.  */
+    flex-direction: column;
+    /* flex 방향은 세로로 */
+    justify-content: space-between;
+    /* 양 iteam 의 간격을 주고 (space-between는 끝과 끝으로 iteam을 보내는걸 말한다) */
+    flex-basis: 562px;
+ }
+
+ .air-info .air-container{
+    background-color: #e8f3f3;
+    /* 표 뒷배경 */
+    position: relative;
+    flex-grow: 1;
+    /* air-container에 flex-grow 1 을 줌으로 남는 공간의 크기를 모두 가지게 한다. */
+ }
+
+ .air-info .air-container:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #00a1a3;
+    width: 132px;
+    /* 좌측 진한 초록 메뉴바의 배경색을 넣기 위해 사용된 코드 */
+    
+ }
+
+ .air-container li.on a {
+    /* 버튼디자인 만들기 */
+    background-color:#fff;
+ }
+
+ .air-info header{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    margin: 15px 0;
+ }
+
+ .air-info header h2{
+    font-size: 26px; 
+    letter-spacing:-1.1px;
+ }
+
+ .air-info header time{
+    margin-right: 5px;
+ }
+
+ .air-container ul{
+    /* ul를 flex로 정렬 시켜준다 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding-left: 15px;
+ }
+
+ .air-container ul li a{
+    color: white;
+    font-size: 16px;
+ }
+
+ .air-info .air-container ul li{
+    position:relative;
+    /* static은 z-index를 이용해도 올라가지 않는다 그러기에 z-index를 가지기 위해 position을 relative로 변경해주면서 해당 iteam 을 올려준다. */
+ }
+
+ .air-info .air-container ul li.on .air-contents {
+    display:block;
+    /* 테이블이 5가지가 나오는데 display 로 설정해 두고 display none 을 이용하여 눌러진 메뉴의 표만 보이게 한다 display: block은 보인다. */
+ }
+ 
+
+ .air-container ul li .air-contents{
+    position: absolute;
+    /* absolute를 이용하여 오른쪽으로 (iteam)표를 이동시켜준다*/
+    right: 10px;
+    top: 10px;
+    display:none;
+    width: 387px;
+    /* 곂쳐있는 표를 하나만 표시시킨다 */
+ }
+
+ .air-container ul .on .air-contents tr{
+    display: flex;
+    justify-content: space-around;
+    
+ }
+
+ .links{
+    flex: 1;
+ }
+
+ .links li{ 
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: #4d5360 0px 0px 10px 0px;
+ }
+
+ .links li a{
+    padding:0 0 0 100px;
+    display: flex;
+    /* display: flex 를 로 만들어 준후 align-items: center를 이용하여 중앙정렬 시켜준다. */
+    align-items: center;
+    height: 90px;
+    background: no-repeat 30px center; 
+ }
+
+ .links li:nth-child(1) a{
+    background-image: url(../images/links_1.png)
+ }
+ .links li:nth-child(2) a{
+    background-image: url(../images/links_2.png)
+ }
+ .links li:nth-child(3) a{
+    background-image: url(../images/links_3.png)
+ }
+
+ .company-info{
+    display: flex;
+    flex-wrap: wrap;
+    outline: 1px green solid;
+    flex-basis: 310px;
+ }
+
+ .company-info li{
+    flex-basis: 50%; 
+    /* 아이템의 크기를 설정할때는 flex-basis를 사용해준다.
+    flex-basis는 flex인 경우에만 사용이 가능하다. */
+ }
+
+ .company-info li a{
+    display: flex;
+    /* a 테그에 flex를 해주는 이유는 내용의 상하정렬을 위해서 하는 것 이다.
+    align-items: center; 를 이용해 주기 위해서 */
+    background-color: pink;
+    height: 100%;
+    /* height 100%를 이용하여 부모 높이를 상속 받아 a 의 영역을 꽉 채워준다. */
+
+ }
+
+ .company-info li:nth-child(1){
+    border: grey 1px solid;
+    border-width: 0 1px 1px 0;
+    /* border-width 는 상, 우, 하, 좌 의 순서로 border를 표시할 수 있습니다 */
+    
+ }
+
+ .company-info li:nth-child(4){
+    border: grey 1px solid;
+    border-width: 1px 0 0 1px;
+ }
+
+ .company-info li a{
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    background: no-repeat 30px center;
+    /* backgroind: no-repeat을 이용하여 반복을 중단 시키고 center를 사용하여 중앙 정렬 시켜준다 */
+    font-size: 18px;
+ }
+
+
+ .company-info li:nth-child(1) a{
+    background-image: url(../images/info_1.png);
+    background-position: 25px 35px; 
+    /* left top */
+ }
+ 
+ .company-info li:nth-child(2) a{
+    background-image: url(../images/info_2.png);
+    background-position: 15px 50px;
+ }
+ 
+ .company-info li:nth-child(3) a{
+    background-image: url(../images/info_3.png);
+    background-position: 25px 47px;
+ }
+ 
+ .company-info li:nth-child(4) a{
+    background-image: url(../images/info_4.png);
+    background-position: 15px 23px;
+ }
+
+ .footer{
+    margin-top: 70px;
+ }
+
+.footer-gnb{
+    background-color:#4d5360;
+}
+
+.footer-gnb ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 55px; 
+}
+
+.footer-gnb ul li{
+    border-left: 1px solid rgba(255,255,255,0.1);
+    flex-basis:20%;
+    display:flex;
+    align-items:center;
+}
+
+.footer-gnb ul li:last-child{
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-gnb a{
+    color: #d5d5d5;
+    font-size: 14px; 
+    padding:0 30px;
+}
+
+.footer-sub-gnb{
+    display: flex;
+}
+
+.footer-sub-gnb li{
+    row-gap:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.flex-box {
+    width:500px;margin:50px auto;
+    outline:1px solid red;
+    display:flex; 
+}
+
+.flex-box .a {
+    background-color:olive;
+    flex:0 1  250px;
+}
+.flex-box .b {
+    background-color:tomato;
+    flex:0 1 250px;
+}
+.flex-box .c {
+    background-color:dodgerblue;
+    flex:0 1 250px;
+}
+
+.test-list {
+    background-color:olive;
+}
+
+.test-list p {
+    display:none;
+}
+
+/* ----- */
+
+.test-list .on p{
+    display: block;
+}
+
+/* ----- */
+
+/* .test-list li:hover > p{
+    display: block;
+} */
+

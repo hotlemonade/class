@@ -1,0 +1,22 @@
+body {
+  background-color: olive;
+  color: #fff;
+}
+
+.wrap {
+  outline: 1px solid red;
+}
+.wrap li {
+  background-color: beige;
+  font-size: 20px;
+}
+.wrap a {
+  color: red;
+  text-decoration: none;
+}
+.wrap a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=common.css.map */
