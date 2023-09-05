@@ -1,0 +1,30 @@
+@charset "utf-8";
+// 폰트
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+// reset 을 가져와준다.
+@import 'reset';
+
+// 변수값을 지정하기 전에 $를 앞에 사용한다.(list형 변수하고 말한다.)
+$bg:#1b1b1b; 
+$text:#717171,#a5a5a5, #fff;
+// 아래 형식의 변수값 지정은 네임잉을 통해서 변수를 지정한다. (key:value 객체형태)
+$line :(
+    line : #2f2f2f,
+    btn : #717171
+);
+
+body{
+    background-color:$bg;
+    color: #fff;
+    font-family:'Noto Sans KR',sans-serif;
+
+}
+
+
+
+
+
+
+
+
+

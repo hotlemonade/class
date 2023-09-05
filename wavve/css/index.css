@@ -12,6 +12,14 @@ body{
     margin: 0 auto;
 }
 
+header .header-fixed{
+    position: fixed;
+    margin: auto auto;
+    width: 100%;
+    height: 110px;
+    background-color: #1b1b1b;
+}
+
 .header-top{
     margin: 14px auto;
     font-size: 12px;
@@ -138,12 +146,26 @@ header .line{
 .selection-coming-img .coming-img-title img{
     height: 34px;
     width: 34px;
+    
 }
 
-.selection-coming img{
+.selection-coming a{
+    overflow: hidden;
+}
+
+.selection-coming a img{
     width: 406px;
     height: 229px;
     border-radius: 10px;
+    transition: all 0.2s linear;
+    
+}
+
+.selection-coming a img:hover{
+    width: 406px;
+    height:229px;
+    transform: scale(1.4);
+    /* 호버시 커지는게 왜 안되는거지? */
 }
 
 .advertise{
