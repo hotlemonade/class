@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="page-header">
-        <ul class="acc-top">
+        <ul class="acc-top base">
             <li><a href="#">로그인</a></li>
             <li><a href="#">이용권</a></li>
             <li><a href="#">쿠폰 코인</a></li>
@@ -16,16 +16,18 @@
             <li><a href="#">이벤트</a></li>
         </ul>
 
-        <div class="nav-header">
-            <h1>
+        <div class="line"></div>
+
+        <div class="nav-header base">
+            <h1 class="logo">
                 <a href="#">
-                    <img src="" alt="">
+                    <img src="./img/wavve-logo.svg" alt="">
                 </a>
             </h1>
 
             <nav class="gnb">
                 <ul>
-                    <li><a href="#">홈</a></li>
+                    <li class="on"><a href="#">홈</a></li>
                     <li><a href="#">카테고리</a></li>
                     <li><a href="#">LIVE</a></li>
                     <li><a href="#">MY</a></li>
@@ -34,25 +36,50 @@
 
             <div class="space"></div>
 
-            <div class="search">
+            <div class="search-wrap">
                  <!-- label for에는 고유이름 id를 지정해서 넣어줘야 한다. -->
-                <label for="search">검색하기</label>
+                <label for="search">
+                    <span class="blind">
+                        검색어입력
+                    </span>
+                </label>
                 <input type="text" id="search" placeholder="제목, 장르, 배우, 찾아보세요.">
                 <!-- button 태그에는 type 태그를 꼭 넣어줘야 한다. -->
-                <button type="button">검색</button>    
+                <button type="button" class="btn-reset">
+                    <span class="blind">
+                        reset
+                    </span>
+                </button>    
             </div>
-
-            
         </div>
     </header>
+    
+    <div class="main-banner">
+        <ul class="lists">
+            <li>
+                <a href="#">
+                    <!-- <img src="./img/bg-banner1.webp" alt=""> -->
+                    <img src="./img/bg-banner-img.webp" alt="">
+                </a>
+            </li>
 
-    <ul>
-        <li>
-            <a href="#">
-                <img src="" alt="">
-            </a>
-        </li>
-    </ul>
+            <li>
+                <a href="#">
+                    <!-- <img src="./img/bg-banner1.webp" alt=""> -->
+                    <img src="./img/bg-banner-img.webp" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <!-- <img src="./img/bg-banner1.webp" alt=""> -->
+                    <img src="./img/bg-banner-img.webp" alt="">
+                </a>
+            </li>
+    
+        </ul>
+    </div>
+    
 
 </body>
 </html>
