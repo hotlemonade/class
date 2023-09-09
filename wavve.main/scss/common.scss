@@ -148,6 +148,78 @@ body{
     
 }
 
+.swiper-wrap {
+    
+    .label{
+        display: flex;
+        margin: 80px 0 20px 0;
+        justify-content: space-between;
+
+        h2{
+            font-size: 24px;
+            color: #fff;
+        }
+
+        p{
+            font-size: 16px;
+            color: nth($text,1);
+        }
+    }
+
+    .swiper-list{
+        display: flex;
+        justify-content: space-between;
+
+        li{
+            
+            a{
+            width: 240px;
+            height: 360px;
+            border-radius: 10px;
+            outline: 1px solid red;
+            position: relative;
+            
+
+            img{
+                width: 240px;
+                height: 360px;
+                overflow: hidden;
+                border-radius: 10px;
+                
+            }
+
+            .swiper-artwork{
+                outline: 1px solid pink;
+                width: 62px;
+                height: 24px;
+                border-radius: 4px;
+                background-color: black;
+                opacity: 80%;
+                position: absolute;
+                bottom: 330px;
+                left: 10px;
+
+                p{
+                    font-size: 12px;
+                    color: lightblue;
+                    
+                }
+            }
+
+            }  
+        }
+    }
+}
+
+.ad{
+    height: 96px;
+    width: 100%;
+    background-color: black;
+    margin-top: 80px;
+}
+    
+    
+
 
 
 
