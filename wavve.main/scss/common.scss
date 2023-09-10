@@ -217,6 +217,79 @@ body{
     background-color: black;
     margin-top: 80px;
 }
+
+footer{
+
+
+    .notice-wrap{
+        margin-top: 120px;
+        border-top: 1px solid #2f2f2f;
+        border-bottom: 1px solid #2f2f2f;
+        
+        .notice{
+            display: flex;
+            justify-content: space-between;
+
+            h3{
+                height: 50px;
+                font-size: 18px;
+                line-height: 50px;
+                color: nth($text,1);
+            }
+        }
+    }
+
+    .footer-gnb{
+        display: flex;
+        margin-top: 30px;
+
+        ul{
+            display: flex;
+            column-gap: 20px;
+            font-size: 14px;
+            width: 100%;
+
+            li{
+                color: nth($text,1);
+                padding: 10px 0;
+
+            }
+        }
+
+        .footer-wavveon{
+            display: flex;
+            justify-content: flex-end;
+            column-gap: 6px;
+            align-items: center;
+    
+            .footer-wavveon-logo{
+                height: 38px;
+                width: 94px;
+                background-color: #252525;
+            }
+    
+            .footer-wavveon-select{
+                height: 38px;
+                width: 225px;
+                background-color: #252525;
+            }
+
+            a{
+                height: 32px;
+                width: 32px;
+                
+            }
+        }
+    }
+
+    
+
+    .footer-info{
+        font-size: 12px;
+        color: nth($text,1);
+        margin-bottom: 100px;
+    }
+}
     
     
 
