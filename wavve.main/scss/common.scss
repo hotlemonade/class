@@ -34,6 +34,7 @@ body{
     right: 0;
     top: 0;
     background-color: $bg;
+    z-index: 3;
 }
 
 .page-header .acc-top{
@@ -61,7 +62,7 @@ body{
 
 .page-header .nav-header .gnb ul{
     display: flex;
-    column-gap: 20px;
+    column-gap: 45px;
     font-size: 20px;
     color: nth($text,1);
 }
@@ -107,11 +108,19 @@ body{
     right: 0;
 }
 
+.btn-fixed{
+    // fixed가 base에 걸치면서 이동하고싶다.????
+    position: fixed;
+    z-index: 3;
+    right: 20px;
+    bottom: 20px;
+    
+}
+
 .main-banner{
     position:relative;
     max-width: 1240px;
     width: 100%;
-    outline: 1px solid red;
     margin:140px auto 0;
     height:500px;
  
@@ -122,7 +131,6 @@ body{
         display: flex;
         column-gap: 20px; 
         height:100%;
-        outline: 1px solid green;
 
         li{
             flex-shrink:0;
@@ -134,7 +142,6 @@ body{
                 border-radius:20px;
                 overflow:hidden;
                 height:100%;
-                outline: 1px solid pink;
 
                 img {
                     object-fit: cover;
@@ -149,7 +156,7 @@ body{
 }
 
 .swiper-wrap {
-    
+    z-index: 1;
     .label{
         display: flex;
         margin: 80px 0 20px 0;
@@ -171,25 +178,30 @@ body{
         justify-content: space-between;
 
         li{
+            width: 240px;
+            height: 360px;
+            border-radius: 10px;
+            overflow: hidden;
             
             a{
             width: 240px;
             height: 360px;
             border-radius: 10px;
-            outline: 1px solid red;
             position: relative;
             
-
+            
             img{
                 width: 240px;
                 height: 360px;
-                overflow: hidden;
                 border-radius: 10px;
-                
+                transition: all 0.2s linear;
+            }
+
+            img:hover{
+                transform: scale(1.05);
             }
 
             .swiper-artwork{
-                outline: 1px solid pink;
                 width: 62px;
                 height: 24px;
                 border-radius: 4px;
@@ -200,8 +212,12 @@ body{
                 left: 10px;
 
                 p{
+                    // 완벽하게 중앙 정렬 하는 방법이 무엇일까????
                     font-size: 12px;
                     color: lightblue;
+                    position: absolute;
+                    right: 10px;
+                    top: 2px;
                     
                 }
             }
@@ -253,6 +269,10 @@ footer{
                 color: nth($text,1);
                 padding: 10px 0;
 
+                a:hover{
+                    color: lightblue;
+                }
+
             }
         }
 
@@ -272,12 +292,20 @@ footer{
                 height: 38px;
                 width: 225px;
                 background-color: #252525;
+
+                select{
+                    height: 38px;
+                    width: 225px;
+                    background-color: #252525;
+                    border: 1px solid #252525;
+                    // 회살표 혹은 꿈이는 법을 알고싶다????
+                }
+                
             }
 
             a{
                 height: 32px;
                 width: 32px;
-                
             }
         }
     }
@@ -290,6 +318,281 @@ footer{
         margin-bottom: 100px;
     }
 }
+
+// live.html
+
+.page-top{
+    margin-top: 120px;
+    background-color: #252525;
+    padding: 40px;
+    margin-bottom: 40px;
+
+    .page-top-title{
+        display: flex;
+        justify-content: space-between;
+        height: 36px;
+        
+
+        h2{
+            font-size: 24px;
+        }
+
+        .btn-wrap{
+            display: flex;
+            align-items: center;
+            
+
+            .btn-reservation{
+                font-size: 16px;
+                height: 36px;
+                padding: 5px 0 5px 32px;
+                color: nth($text,1);
+                background: url(../img/icon-alart.svg) no-repeat 0 center;
+
+            }
+                
+
+                
+            }
+
+            .btn-schedule{
+                font-size: 16px;
+                height: 36px;
+                padding: 5px 0 5px 32px;
+                margin-left: 20px;
+                color: nth($text,1);
+                background: url(../img/icon-detail.svg) no-repeat 0 center;
+
+            }
+        }
+    }
+
+    .live-list{
+        .list-title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+            h2{
+                font-size: 24px;
+            }
+
+            select{
+                width: 210px;
+                height: 40px;
+                background-color: #252525;
+                border: 1px solid #252525;
+            }
+        }
+
+        .badge-list{
+
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                img{
+                    width: 240px;
+                    height: 135px;
+                    border-radius: 10px;
+                }
+
+                .bage-info{
+                    color: nth($text,1);
+                    font-size: 16px;
+                    margin-bottom: 4px;
+
+                    p:nth-child(1){
+                        margin-bottom: 4px;
+                    }
+
+                    p:nth-child(2){
+                        font-size: 14px;
+                        margin-bottom: 40px;
+                    }
+                }
+
+            }
+        }
+    }
+
+// login
+
+.base-login{
+    max-width: 560px;
+    width: 100%;
+    margin: 170px auto;
+}
+
+.member{
+    background-color: #252525;
+    
+
+    .login-layout{
+        width: 100%;
+        padding: 40px 0;
+
+        h2{
+            font-size: 32px;
+            // 왜 h1태그에 block 인 text-align center 가 먹는거지???
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+    .join-box{
+
+        padding: 0 40px;
+
+        h3{
+            font-size: 18px;
+            margin-bottom: 28px;
+            color: nth($text,2);
+            text-align: center;
+        }
+
+        .login-wrap{
+            
+            .id{
+                margin-bottom: 10px;
+                
+                input{
+                    width: 480px;
+                    height: 53px;
+                    padding: 0 20px;
+                    background-color: #2f2f2f;
+                    border-style: none;
+                    border-radius: 6px;
+                }
+            }
+
+            .pw{
+                margin-bottom: 12px;
+                input{
+                    width: 480px;
+                    height: 53px;
+                    padding: 0 20px;
+                    background-color: #2f2f2f;
+                    border-style: none;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        .id-save{
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: nth($text,2);
+            margin-bottom: 40px;
+
+            li:nth-child(2){
+                margin-right: 12px;
+            }
+
+            .box{
+                border: 1px solid #d9d9d9;
+                height: 23px;
+                width: 23px;
+                margin-right: 8px;
+            }
+        }
+
+        .login-btn{
+            width: 480px;
+            height: 60px;
+            background-color: #1351f9;
+            border-radius: 35px;
+            margin-bottom: 20px;
+
+            .btn{
+                width: 480px;
+                height: 60px;
+            }
+        }
+
+        .join-find{
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+            margin-bottom: 54px;
+
+            li{
+                font-size:14px;
+                color: nth($text,2);
+            }
+
+        }
+    }
+
+    .sns-box{
+
+        padding: 0 40px;
+        h2{
+            font-size: 18px;
+            color: nth($text,2);
+            margin-bottom: 20px;
+        }
+
+        ul{
+            display:flex;
+            justify-content: center;
+            column-gap: 20px;
+            margin-bottom: 40px;
+
+            li:nth-child(1){
+                background: url(../img/kakao-img.png) no-repeat center center;
+                width: 60px;
+                height: 60px;
+                background-color: #FCED4F;
+                border-radius: 50%;
+                
+            }
+
+            li:nth-child(2){
+                background: url(../img/tworld-img.png) no-repeat center center;
+                width: 60px;
+                height: 60px;
+                background-color: #3219C7;
+                border-radius: 50%;
+            }
+
+            li:nth-child(3){
+                background: url(../img/naver-img.png) no-repeat center center;
+                width: 60px;
+                height: 60px;
+                background-color: #58B637;
+                border-radius: 50%;
+            }
+
+            li:nth-child(4){
+                background: url(../img/facebook-img.png) no-repeat center center;
+                width: 60px;
+                height: 60px;
+                background-color: #425893;
+                border-radius: 50%;
+            }
+
+            li:nth-child(5){
+                background: url(../img/apple-img.png) no-repeat center center;
+                width: 60px;
+                height: 60px;
+                background-color: #FEFFFF;
+                border-radius: 50%;
+            }
+
+        }
+
+        .sns-info{
+            font-size: 14px;
+            color: nth($text,1);
+        }
+    }
+
+    }
+}
+
+
+
     
     
 
