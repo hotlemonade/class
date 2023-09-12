@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+body{
+    width: 100%;
+    height: 909px;
+    background-color: #EBE3DC;
+    position: relative;
+}
+
+.first-header{
+    height: 66px;
+    width: 100%;
+    padding: 5px 0;
+    /* text-align cneter 이 인라인만 먹는걸로 하는데 정확이 어디서 왜 먹히는지 정확히 알고싶다. */
+    text-align: center;
+    border-bottom: 1px solid black;
+    z-index: 3;
+    position: absolute;
+}
+
+header h1 img{
+    height: 55px;
+    width: 72px;
+    
+}
+
+.first-page .content{
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    text-align:center
+}
+
+.first-page .content img{
+    text-align:center;
+    height: 200px;
+    width: 200px;
+    margin: 160px 0 50px 0;
+    
+}
+
+.first-page .content h2{
+    font-size: 24px;
+    color: #115b6d;
+    margin-bottom: 5px;
+}
+
+.first-page .content h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: #115b6d;
+    margin-bottom: 130px;
+}
+
+.first-page .content p{
+    font-size: 16px;
+
+}
+
+.background-leaves .land{
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+}
+
+.background-leaves .leaves{
+    position: absolute;
+    z-index: 3;
+    height: 909px;
+    width: 100%;
+}
+
+/* second */
+
+.main-header{
+    border-bottom: 1px solid black;
+    height: 66px;
+    width: 100%;
+    padding:3px 20px 0 20px;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+}
+
+.main-header .header-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header .header-wrap .music{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.main-header .header-wrap .music .onof{
+    display: flex;
+    column-gap: 5px;
+    flex-basis: 10px;
+}
+
+.main-header .header-wrap .music .onof p{
+    font-size: 14px;
+    color: #115b6d;
+}
+
+.main-header .header-wrap .music .music-toggle {
+    width: 40px;
+    height: 25px;
+    background-color: #115b6d;
+    border-radius: 20px;
+    bottom: -5px;
+    position: relative;
+}
+
+.music-toggle:after{
+    content:'';
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    /* absolute를 이용해서  */
+    position: absolute;
+    right: 4px;
+    top: 3px;
+}
+
+.sec-first-section{
+    height: 1020px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sec-first-section .sec-title{
+    font-size: 34px;
+    font-weight: bold;
+    position: absolute;
+    top: 25%;
+    z-index: 7;
+    outline: 1px solid red;
+    left: 50%;
+    /* absolute 를 이용해서 중앙정렬 */
+    transform: translate(-50%, -50%);
+}
+
+.sec-first-section h2{
+    text-align: center;
+}
+
+.sec-background .um-koala{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    z-index: 5;
+}
+
+.sec-background .um-koala img{
+    height: 350px;
+    width: 350px;
+    
+}
+
+.sec-background .cloud{
+    position: absolute;
+    right: -5%;
+    top: 40%;
+}
+
+.sec-background .cloud img{
+    height: 65px;
+    width: 804px;
+}
+
+.sec-background .rock{
+    position: absolute;
+    right: 30%;
+    bottom: 27%;
+    z-index: 3;
+}
+
+.sec-background .rock img{
+    height: 120px;
+    width: 240px;
+}
+
+.sec-background .sec-land img{
+    width: 2000px;
+    height: 407px;
+}
+
+.sec-background .sec-land img:nth-child(1){
+    position: absolute;
+    bottom: 40px;
+    z-index: 1;
+}
+
+.sec-background .sec-land img:nth-child(2){
+    position: absolute;
+    bottom: -60px;
+    z-index: 2;
+    
+}
