@@ -139,7 +139,6 @@ header h1 img{
     position: absolute;
     top: 25%;
     z-index: 7;
-    outline: 1px solid red;
     left: 50%;
     /* absolute 를 이용해서 중앙정렬 */
     transform: translate(-50%, -50%);
