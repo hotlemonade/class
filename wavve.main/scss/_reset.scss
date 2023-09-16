@@ -6,6 +6,11 @@
     box-sizing:border-box;
 }
 
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
 h1,h2,h3,h4,h5,h6,strong {
     /* font-weight:normal; */
     font-weight:inherit;
@@ -39,8 +44,34 @@ button {
     border:none;
     cursor:pointer;
     color: inherit;
+    background-color: transparent;
 }
 
 img{
     max-width: 100%;
 }
+
+select{
+    // background 축약형에 크기를 변경하고 싶으면 position 값뒤에 / 붙이며 값을 작성한다.
+    background: url(../img/arrow_back_ios_new.svg) no-repeat right 7px center/18px auto;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+input {
+    border:none;
+}
+
+input[type=checkbox]{
+    appearance: none;
+    background: url(../img/check_box_off.svg) no-repeat center center/contain;
+    height: 20px;
+    width: 20px;
+    outline: 1px solid red;
+    &:checked{
+        background-image: url(../img/check_box_active.svg);
+    }
+
+}
+

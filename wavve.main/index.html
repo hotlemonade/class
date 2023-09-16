@@ -308,6 +308,45 @@
             </p>
         </div>
     </footer>
+
+    <div class="modal-wrap">
+        <div class="modal-box">
+            <button type="button"   class="modal-close"> 
+                <span class="blind">close</span>
+            </button>
+            <a href="#">
+                <img src="./img/ad-modal.jpeg" alt="이용권 첫달 구매하면 백원">
+            </a>
+            <p>
+                <input type="checkbox" id="close-week">
+                <label for="close-week">
+                    일주일 동안 보지 않기
+                </label>
+            </p>
+            
+
+        </div>
+        
+    </div>
+
+    <script>
+
+        const closeModal = () => {
+            const modal = document.querySelector('.modal-wrap');
+            const btn = document.querySelector('.modal-close')
+            
+
+            btn.addEventListener('click', ()=> {
+            modal.style.display = 'none'
+            })
+        }
+
+        closeModal();
+      
+
+
+ 
+    </script>
     
 
 </body>

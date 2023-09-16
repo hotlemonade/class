@@ -454,29 +454,20 @@ footer{
         }
 
         .login-wrap{
-            
+            margin-bottom: 12px;
             .id{
-                margin-bottom: 10px;
-                
-                input{
-                    width: 480px;
-                    height: 53px;
-                    padding: 0 20px;
-                    background-color: #2f2f2f;
-                    border-style: none;
-                    border-radius: 6px;
-                }
+                margin-bottom: 10px; 
             }
+ 
+            input{
+                width: 480px;
+                height: 53px;
+                padding: 0 20px;
+                background-color: #2f2f2f; 
+                border-radius: 6px;
 
-            .pw{
-                margin-bottom: 12px;
-                input{
-                    width: 480px;
-                    height: 53px;
-                    padding: 0 20px;
-                    background-color: #2f2f2f;
-                    border-style: none;
-                    border-radius: 6px;
+                &:focus{
+                    background-color: #717171;
                 }
             }
         }
@@ -492,12 +483,7 @@ footer{
                 margin-right: 12px;
             }
 
-            .box{
-                border: 1px solid #d9d9d9;
-                height: 23px;
-                width: 23px;
-                margin-right: 8px;
-            }
+            
         }
 
         .login-btn{
@@ -578,6 +564,44 @@ footer{
         }
     }
 
+    }
+}
+
+.modal-wrap{
+    background-color: rgba(#000,0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-box{
+        position: relative;
+
+        button{
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            right: -40px;
+            background: url(../img/close.svg) no-repeat center center/contain;
+        }
+
+        a{
+            img{
+                border-radius: 16px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+        }
     }
 }
 
