@@ -6,7 +6,7 @@
 .base-header{
     width: 100%;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 100px;
 }
     
 .base{
@@ -18,16 +18,32 @@
 
 .top-header{
     
-    height: 72px;
-    padding-top: 20px;
+    height: 112px;
+    width: 100%;
+    padding-top: 40px;
     position: fixed;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    h1{
+        width: 142px;
+    }
+
+    .space{
+        display: flex;
+        flex-grow: 1;
+    }
     
     ul{
         display: flex;
-        justify-content: space-between;
+        column-gap: 50px;
+        
 
         li{
+            
             h1{
                 a{
                     img{
@@ -41,9 +57,37 @@
     }
 
     .ham{
-        height: 26px;
+        display: block;
         width: 35px;
+        height: 26px;
         outline: 1px solid red;
+        position: relative;
+        
+
+        span{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 4px;
+            background-color: black;
+            border-radius: 4px;
+            position: absolute;
+            right: 0;
+        }
+
+        // span:nth-child(1){
+        //     top: 0;
+        // }
+
+        // span:nth-child(2){
+        //     top: 50%;
+        // }
+
+        // span:nth-child(3){
+        //     bottom: 0;
+        // }
+        
     }
 }
 
@@ -51,25 +95,77 @@
     background: url(../img/banner-bg2.jpeg) no-repeat center center;
     background-size: cover;
     width: 1920px;
-    height: 909px;
+    height: 995px;
     position: relative;
     z-index: 1;
 
     .banner-title-wrap{
-        background-color: pink;
         display: flex;
         position: absolute;
-        margin-top: 100px;
         top: 40%;
+        padding-left: 100px;
+
+        .banner-title{
+            h2{
+                font-size: 72px;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            strong{
+                font-size: 22px;
+                color: white;
+                
+            }
+
+        }
 
         .next-btn{
-            
+            display: flex;
+            column-gap: 30px;
+            transform: rotate(270deg);
+            position: absolute;
+            top: 50%;
+            left: -45px;
+
+            button{
+                background: inherit;
+                border: none;
+                box-shadow: none;
+                font-size: 18px;
+                color: white;
+                
+            }
         }
 
 
-        
-        
-        
+    }
+
+    .ic-social{
+        width: 60px;
+        height: 24;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 10%;
+
+        li{
+            .ic-fb{
+                img{
+                    width: 8px;
+                    height: 18px;
+                }
+            }
+
+            .ic-nav{
+                img{
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+        }
     }
 }
 
