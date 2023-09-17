@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import 'reset';
+
+.base-header{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+    
+.base{
+    max-width: 1267px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-header{
+    
+    height: 72px;
+    padding-top: 20px;
+    position: fixed;
+    z-index: 2;
+    
+    ul{
+        display: flex;
+        justify-content: space-between;
+
+        li{
+            h1{
+                a{
+                    img{
+                        width: 142px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .ham{
+        height: 26px;
+        width: 35px;
+        outline: 1px solid red;
+    }
+}
+
+.banner{
+    background: url(../img/banner-bg2.jpeg) no-repeat center center;
+    background-size: cover;
+    width: 1920px;
+    height: 909px;
+    position: relative;
+    z-index: 1;
+
+    .banner-title-wrap{
+        background-color: pink;
+        display: flex;
+        position: absolute;
+        margin-top: 100px;
+        top: 40%;
+
+        .next-btn{
+            
+        }
+
+
+        
+        
+        
+    }
+}
+
