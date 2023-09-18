@@ -10,7 +10,7 @@
 }
     
 .base{
-    max-width: 1267px;
+    max-width: 1303px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -18,15 +18,15 @@
 
 .top-header{
     
-    height: 112px;
+    height: 72px;
     width: 100%;
-    padding-top: 40px;
     position: fixed;
     z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    background-color: black;
+    
 
     h1{
         width: 142px;
@@ -40,18 +40,25 @@
     ul{
         display: flex;
         column-gap: 50px;
+        font-size: 17px;
         
-
         li{
+            color: white;
+             
             
-            h1{
-                a{
-                    img{
-                        width: 142px;
-                        height: auto;
-                    }
+            a{
+                   
+                img{
+                    width: 142px;
+                    height: auto;
                 }
             }
+
+            a:hover{
+                color:#E2E2E2;
+                transition: color 0.2s ease-in; 
+            }
+            
         }
 
     }
@@ -123,7 +130,7 @@
 
         .next-btn{
             display: flex;
-            column-gap: 30px;
+            column-gap: 50px;
             transform: rotate(270deg);
             position: absolute;
             top: 50%;
@@ -136,6 +143,11 @@
                 font-size: 18px;
                 color: white;
                 
+            }
+
+            button:hover{
+                color: #767676;
+                transition: color 0.2s ease-in;
             }
         }
 
@@ -157,6 +169,11 @@
                     width: 8px;
                     height: 18px;
                 }
+
+                img:hover{
+                    filter: brightness(0.5);
+                    transition: all 0.2s ease-in;
+                }
             }
 
             .ic-nav{
@@ -164,8 +181,106 @@
                     height: 14px;
                     width: 14px;
                 }
+
+                img:hover{
+                    filter: brightness(0.5);
+                    transition: all 0.2s ease-in;
+                }
             }
         }
     }
+}
+
+.mobile{
+    height: 995px;
+    padding: 95px 0;
+
+    .mobile-wrap{
+        height: 845px;
+        outline: 1px solid red;
+
+        .mobile-title{
+            display: flex;
+            align-items: center;
+            column-gap: 300px;
+            margin-bottom: 70px;
+
+            h3{
+                font-size: 50px;
+                font-weight: 900;
+            }
+
+            p{
+                font-size: 19px;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+        }
+
+        .mobile-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px 30px;
+            
+            
+            li{
+                height: 210px;
+                width: 400px;
+                background-color: #f6f6f6;
+                // 중앙정렬 어떻게 하는거지??
+
+            li:hover{
+                transition: all 0.2s ease-in;
+                background-color: blue;
+                box-shadow: 20px 20px gray;
+            }
+                
+                a{
+                    
+                    .list-wrap{
+                        padding: 30px 40px;
+                        .list-title{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            
+                            h4{
+                                font-size: 24px;
+                                font-weight: 700;
+                            }
+
+                            img{
+                                height: 35px;
+                                width: 35px;
+                            }
+                        }
+
+                        .list-content{
+                        
+                            p{
+                                margin-top: 10px;
+                                font-size: 15px;
+                                line-height: 1.7;
+                                margin-bottom: 30px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.test{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+.test:hover{
+    transition: all 0.2s ease-in;
+    background-color: white;
+    box-shadow: 20px 20px gray;
 }
 
