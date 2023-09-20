@@ -143,6 +143,8 @@
          
 }
 
+
+
 .banner{
     background: url(../img/banner-bg2.jpeg) no-repeat center center;
     background-size: cover;
@@ -424,44 +426,181 @@
             position: absolute;
             left: 700px;
         }
+
+        p:after{
+            content: '';
+            border: 1.5px solid black;
+            width: 55px;
+            position: absolute;
+            left: -90px;
+            top: 5px;
+        }
     }
 
     .solution-info{
         ul{
-            outline: 1px solid red;
+            
             display: grid;
             grid-template-columns: repeat(2,1fr);
             padding-left: 550px;
-            gap: 30px 20px;
-            margin-top: 50px;
+            gap: 80px 20px;
+            margin-top: 100px;
 
             li{
-                outline: 1px solid red;
                 width: 350px;
+                position: relative;
                 a{
-                    // a 영역 크기 키우는 법이 뭐지? widht height 한다고 안된다.
-                    h4{
-                        font-size: 32px;
-                        font-weight: 700;
-                        margin-bottom: 22px;
-                    }
 
-                    .solution-line{
-                        border: 1.5px solid black;
-                        width: 100%;
-                        margin-bottom: 22px;
-                    }
+                    .title-info{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h4{
+                            font-size: 32px;
+                            font-weight: 700;
+                        }
     
-                    p{
-                        line-height: 1.5;
+                        h4:after{
+                            content: '';
+                            width: 347px;
+                            border: 1.5px solid black;
+                            position: absolute;
+                            left: 0;
+                            top: 60px;
+                            
+                        }
+
+                        img{
+                            width: 30px;
+                            height: 14px;
+                        }
                         
                     }
+
+                    // a 영역 크기 키우는 법이 뭐지? widht height 한다고 안된다.
+                    
+
+    
+                    p{
+                        margin-top: 50px;
+                        line-height: 1.5;
+                    }
+
+                    
                 }
             }
 
             
         }
     }
+}
+
+.section-title{
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    .title-wrap{
+
+        h3{
+            font-size: 50px;
+            font-weight: 900;
+            color: white;
+        }
+
+        p{
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.5;
+            position: absolute;
+            left: 700px;
+        }
+    }
+}
+
+.section-title-b{
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    .title-wrap{
+
+        h3{
+            font-size: 50px;
+            font-weight: 900;
+            color: black;
+        }
+
+        p{
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.5;
+            position: absolute;
+            left: 700px;
+        }
+    }
+}
+
+.client-wrap{
+    height: 909px;
+    width: 100%;
+    background: url(../img/client-bg.jpeg) no-repeat center center;
+    background-size: cover;
+    padding: 110px 0 55px 0;
+
+    
+
+    .client-info-wrap{
+    
+        ul{
+            display: flex;
+            justify-content: space-between;
+
+            li{
+
+                .client-sub-title{
+                    
+                    position: relative;
+
+                    h4{
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #fff;
+                        line-height: 1.5;
+                    }
+
+                    h4:after{
+                        content: '';
+                        width: 56px;
+                        border: 1.5px solid #fff;
+                        position: absolute;
+                        left: 0;
+                        top: 124px;
+                    }
+
+                    p{
+                        color: #fff;
+                        margin-top: 55px;
+                        line-height: 1.8;
+                        font-size: 18px;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+.chart-wrap{
+    height: 909px;
+    width: 100%;
+    background: url(../img/chart-bg.jpeg) no-repeat center center;
+    background-size: cover;
+    padding: 110px 0 55px 0;
 }
 
 
