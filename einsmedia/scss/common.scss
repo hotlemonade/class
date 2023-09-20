@@ -17,15 +17,19 @@
 }
 
 .top-header{
-    
-    height: 72px;
     width: 100%;
     position: fixed;
     z-index: 2;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: black;
+    align-items: center; 
+    padding-top:40px;
+    column-gap: 70px;
+
+    &.fixed {
+        padding-top:0;
+        background-color: black;
+    }
     
 
     h1{
@@ -37,21 +41,50 @@
         flex-grow: 1;
     }
     
-    ul{
+    .gnb{
         display: flex;
-        column-gap: 50px;
+        column-gap: 30px;
         font-size: 17px;
-        
-        li{
+        text-align: center;
+        // ul 안에 ul 이 들어갈때는 조심해야한다.
+        & > li{
             color: white;
-             
-            
-            a{
-                   
-                img{
-                    width: 142px;
-                    height: auto;
+            outline: 1px solid gold;
+            position: relative;
+
+            &.on{
+                .depth-2{
+                    display: block;
                 }
+            }
+
+            .depth-2{
+                background-color: red;
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                // 왼쪽으로 땡긴다 (자기 몸 크기 값의 -50%)
+                transform: translateX(-50%);
+                padding: 25px 0;
+                display: none;
+
+            
+                
+
+                a{
+                    display: block;
+                    padding: 10px 30px;
+                    // 줄바꿈 방지
+                    white-space: nowrap;
+                    
+                }
+            }
+            
+
+            
+            & > a{
+                padding:1.53em 10px; /* 27.5px */
+                   
             }
 
             a:hover{
@@ -66,36 +99,48 @@
     .ham{
         display: block;
         width: 35px;
-        height: 26px;
-        outline: 1px solid red;
-        position: relative;
+        
+
+        &:hover {
+            span:after{
+                width:100%;
+            }
+        }
         
 
         span{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
+            display:block;
             height: 4px;
-            background-color: black;
-            border-radius: 4px;
-            position: absolute;
-            right: 0;
+            background-color: #fff; 
+            position:relative;
+
+            &:nth-child(2) {
+                margin:6px 0;
+                //  호버시 딜레이를 이용하여 역동적인 애니메이션 효과
+                &:after {
+                   transition-delay:0.1s;
+                }
+            }
+
+            &:last-child {
+                &:after {
+                    transition-delay:0.2s;
+                }
+            }
+        } 
+
+        span:after{
+            content: '';
+            position:absolute;
+            left:0;top:0;bottom:0;
+            width:0;
+            transition:0.3s;
+            background-color:rgb(0, 195, 255);
+
+             
         }
-
-        // span:nth-child(1){
-        //     top: 0;
-        // }
-
-        // span:nth-child(2){
-        //     top: 50%;
-        // }
-
-        // span:nth-child(3){
-        //     bottom: 0;
-        // }
-        
     }
+         
 }
 
 .banner{
