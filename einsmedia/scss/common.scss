@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-@import 'reset';
+@import 'reset','mixin';
 
 .base-header{
     width: 100%;
@@ -9,11 +9,16 @@
     padding: 0 100px;
 }
     
-.base{
+// .base{
+//     max-width: 1303px;
+//     width: 100%;
+//     margin: 0 auto; 
+// } 
+
+%base{
     max-width: 1303px;
     width: 100%;
-    margin: 0 auto;
-    // padding: 0 20px;
+    margin: 0 auto; 
 }
 
 .top-header{
@@ -27,8 +32,8 @@
     column-gap: 70px;
 
     &.fixed {
-        padding-top:0;
-        background-color: black;
+        padding-top:0; 
+        @include blur(8px, #000, 0.2);
     }
     
 
@@ -49,14 +54,28 @@
         // ul 안에 ul 이 들어갈때는 조심해야한다.
         & > li{
             color: white;
-            outline: 1px solid gold;
+            // outline: 1px solid gold;
+
+            // @include out(1px, solid, gold);
+            @include out($style:dashed);
             position: relative;
+
+            & > a{
+                padding:1.53em 10px; /* 27.5px */
+                   
+            }
+
+            a {
+                display:block;
+            }
 
             &.on{
                 .depth-2{
                     display: block;
                 }
             }
+
+           
 
             .depth-2{
                 background-color: red;
@@ -66,13 +85,10 @@
                 // 왼쪽으로 땡긴다 (자기 몸 크기 값의 -50%)
                 transform: translateX(-50%);
                 padding: 25px 0;
-                display: none;
-
-            
-                
+                display: none; 
 
                 a{
-                    display: block;
+                    
                     padding: 10px 30px;
                     // 줄바꿈 방지
                     white-space: nowrap;
@@ -82,10 +98,7 @@
             
 
             
-            & > a{
-                padding:1.53em 10px; /* 27.5px */
-                   
-            }
+          
 
             a:hover{
                 color:#E2E2E2;
@@ -238,12 +251,58 @@
     }
 }
 
-.mobile{
-    height: 909px;
-    padding: 95px 0;
+.module-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
 
-    .mobile-wrap{
-        height: 845px;
+    &.only {
+        display:block;
+    }
+
+    h3{
+        font-size: 50px;
+        font-weight: 900;
+        flex-basis:50%;
+    }
+
+    p{
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.5; 
+        flex-basis:50%;
+        display:flex;
+        column-gap:30px; 
+        &:before {
+            content:'';
+            width:100px;
+            height:2px;
+            background-color:#000;
+            display:block;
+            margin-top:9px;
+        }
+    }
+}
+
+
+.test-box {
+    @extend %base;
+    @include out;
+
+}
+.mobile-wrap{
+    // height: 909px;
+    height:100vh;
+    @include out;
+    display:flex;align-items:center;justify-content:center;
+    // padding: 95px 0;
+    .inner {
+        @extend %base;
+        transform:translateY(40px);
+        @include out;
+    }
+   
+        // height: 845px;
         position: relative;
 
         .mobile-title{
@@ -273,7 +332,7 @@
             
             li{
                 height: 210px;
-                width: 400px;
+                // width: 400px;
                 background-color: #f6f6f6;
                 // 중앙정렬 어떻게 하는거지??
 
@@ -317,7 +376,7 @@
                 }
             }
         }
-    }
+    
 }
 
 .marketing{
@@ -327,6 +386,10 @@
     padding: 95px 0 55px 0;
     position: relative;
     z-index: 1;
+
+    .inner {
+        @extend %base;
+    }
 
     .mk-title-wrap{
         // 꼭 반응형에 대한 이해를 하자

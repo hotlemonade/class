@@ -1,0 +1,16 @@
+@mixin blur($size, $color, $alpha) {
+    background-color:rgba($color, $alpha);
+    -webkit-backdrop-filter: blur($size);
+    backdrop-filter: blur($size);
+}
+
+@mixin out($color:red, $size:1px, $style:solid) {
+    outline: $size $style $color;
+}
+
+@mixin posCenter($position:absolute) {
+    position:$position;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
