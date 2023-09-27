@@ -711,6 +711,32 @@
     }
 }
 
+.find-wrap{
+    height: 100vh;
+    width: 100%;
+    padding: 110px 0 55px 0;
+    
+    .inner{
+        @extend %base;
+    }
+
+    .find-info{
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                outline: 1px solid red;
+                
+                .find-title{
+                    outline: 1px solid blue;
+                    display: flex;
+                }
+            }
+        }
+    }
+
+}
+
 
 
 
