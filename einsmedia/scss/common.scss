@@ -726,10 +726,34 @@
             justify-content: space-between;
             li{
                 outline: 1px solid red;
+
                 
                 .find-title{
-                    outline: 1px solid blue;
+                    
                     display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    margin-bottom: 45px;
+
+                    h4{
+                        font-size: 32px;
+                        font-weight: 700;
+                    }
+
+                    h4:after{
+                        content: '';
+                        width: 100%;
+                        border: 1.5px solid black;
+                        position: absolute;
+                        top: 55px;
+                        right: 0;
+                    }
+
+                    img{
+                        width: 30px;
+                        height: 14px;
+                    }
                 }
             }
         }
