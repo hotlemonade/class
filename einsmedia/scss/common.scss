@@ -759,6 +759,31 @@
         }
     }
 
+    .red-box{
+        margin-top: 100px;
+        background-color: #E60013;
+        color: #fff;
+        padding: 30px 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .space{
+            flex-basis: 0.5;
+        }
+
+        .login-wrap{
+
+            input{
+                display: block;
+            }
+
+            .checkbox-wrap{
+                display: flex;
+            }
+        }
+
+    }
 }
 
 
