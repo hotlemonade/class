@@ -502,6 +502,22 @@
         }
     }
 
+
+        @keyframes widthScale {
+            // 0퍼센트에서
+            0%{transform: scaleX(0);}
+            // 100퍼센트로 증가해라
+            100%{transform: scaleX(1);}
+        }
+
+        @keyframes heightScale {
+            // 0퍼센트에서
+            0%{transform: scaleY(0);}
+            // 100퍼센트로 증가해라
+            100%{transform: scaleY(1);}
+        }
+
+
     .solution-info{
         ul{
             
@@ -513,28 +529,44 @@
 
             li{
                 width: 350px;
-                position: relative;
-                a{
-
+                outline: 1px solid red;
+                
                     .title-info{
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        position: relative;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
 
+                    &:hover:after{
+                        animation-name: heightScale;
+                        animation-duration: 0.5s;
+                    }
+
+                    // 마우스를 올리면 인터렉션이 작동해라 width 가 0 ~100으로 되도록 만들어라
+
+                        &:after{
+                            content: '';
+                            width: 100%;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            background-color: black;
+                            height: 20px;
+                            // 축 기준
+                            transform-origin: left bottom;
+                        }
+
+
+                        
+                        
                         h4{
                             font-size: 32px;
                             font-weight: 700;
                         }
     
-                        h4:after{
-                            content: '';
-                            width: 347px;
-                            border: 1.5px solid black;
-                            position: absolute;
-                            left: 0;
-                            top: 60px;
-                            
-                        }
+                        
 
                         img{
                             width: 30px;
@@ -548,12 +580,10 @@
 
     
                     p{
-                        margin-top: 50px;
+                        // margin-top: 50px;
                         line-height: 1.5;
                     }
-
-                    
-                }
+                
             }
 
             
