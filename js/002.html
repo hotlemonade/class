@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check age<span>SPAN</span></h1>
+    <input type="text" id="name" value="noname">
+    <input type="text" id="age">
+    <button type="button" id="btn">확인</button>
+
+    <p class="result">
+        MESSAGE
+    </p>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const user = document.getElementById('name');
+        const age = document.getElementById('age');
+        const btn = document.getElementById('btn');
+        const p = document.querySelector('.result');
+
+        console.log(h1.textContent)
+
+        h1.innerHTML = 'Hello Javascript <hr>';
+        h1.style.color = 'red';
+        console.log(h1.innerHTML, user.value)
+        console.log(user.value)
+        console.log(btn.textContent)
+
+        console.log(h1)
+    </script>
+</body>
+</html>
