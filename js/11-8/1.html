@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>숫자를 입력하세요</h1>
+    <p>1~100</p>
+    <input type="text" placeholder="num1" id="num1">
+    <input type="text" placeholder="num2" id="num2">
+
+    <button type="button" id="btn">계산</button>
+    <p>두 수의 합은 <span class="sum"></span> 입니다.</p>
+    <p>두 수의 차는 <span class="minus"></span> 입니다.</p>
+    <p>두 수의 곱은 <span class="multiply"></span> 입니다.</p>
+    <p>두 수의 나누기는 <span class="divide"></span> 입니다.</p>
+    
+    <script>
+        
+        const num1 = document.getElementById('num1') 
+        const num2 = document.getElementById('num2') 
+        const btn = document.getElementById('btn') 
+        const sum = document.querySelector('.sum');
+        const minus = document.querySelector('.minus');
+        const multiply = document.querySelector('.multiply');
+        const divide = document.querySelector('.divide');
+
+        const h1 = document.querySelector('h1');
+        console.log(h1.innerHTML)
+        h1.innerHTML = 'Hello world';
+
+        // number 매소드는 안에있는 매개변수를 숫자형 데이터로 형 변환 한다.
+
+        // 매소드가 뭐였지? = 함수(미리 만들어둔 명령어) , 매개변수 는? = 예시 Number(num1.value) <- 안에 들어가있는걸 매개변수 라고 말한다.
+
+        // 인자값? 
+
+        // 계산이라는 버튼을 클릭 (eventlistner) num1 이랑 num2 의 합 값을 class=sum에 출력시켜라.
+
+        // btn 버튼은 클릭하면 
+        // let n1 = Number(num1.value);
+        // let n2 = Number(num2.value);
+        
+        // console.log(n1 + n2)
+
+        // btn.addEventListener('click', function(e){
+        //     sum.innerHTML = (Number(num1.value) + Number(num2.value))
+        //     multiply.innerHTML = (Number(num1.value) * Number(num2.value))
+        // })
+
+        //  1. num1의 값을 가지고온다
+        //  2. num2의 값을 가지고온다
+        //  3. 가지고온 1 + 2 를 더한다 
+        //  4. sum 이라는 span 태그에 출력한다.
+        
+        btn.addEventListener('click',(e) => {
+            
+            let n1 = Number(num1.value)
+            let n2 = Number(num2.value)
+
+            // let result = n1 <= 0 || n1 > 100 || n2<=0 || n2 > 100;  
+
+            let result = n1 > 0 && n1 <=100 && n2 >0 && n2 <= 100;
+
+            if( !result) {
+                console.log('1~100 number is available')
+                return false;
+            }
+           
+            
+            sum.innerHTML = n1 + n2
+            minus.innerHTML = n1 - n2
+            multiply.innerHTML = n1 * n2
+            divide.innerHTML = n1 / n2
+
+
+
+        })
+
+        function test() {
+            let a = 1;
+            if( a < 3) {
+                console.log('a is smaller than 3')
+                return false;
+            }
+    
+            console.log('hello')
+        }
+
+        test()
+    </script>
+</body>
+</html>
