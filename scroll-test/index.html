@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            height: 6000px;
+
+        }
+
+        @keyframes moveLeft {
+        0% {
+        opacity:0; transform:translateX(100px)
+        }
+        100% {
+        opacity:1; transform:translateX(0)
+        }
+        }
+
+        div{
+            margin-top: 1000px;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: all 1.5s;
+            animation: moveLeft 1s ease-in-out;
+        }
+
+        div img{
+            height: 300px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>한번 배워볼까</h1>
+    </div>
+    
+    <div>
+        <h1>잘 이해를 해봐야하지</h1>
+    </div>
+    
+    <div>
+        <h1>이번에는 성공하리</h1>
+    </div>
+    
+    <div>
+        <img src="./jsLogo.png" alt="">
+    </div>
+    
+    <script>
+        let observer = new IntersectionObserver((e)=>{
+            e.forEach((box)=>{
+                if(box.isIntersecting){
+                    box.target.style.opacity = 1;
+                    
+                    
+                } else{
+                    box.target.style.opacity = 0; 
+                }
+                box.intersectionRatio
+            })
+        })
+
+        let div = document.querySelectorAll('div')
+
+
+        observer.observe(div[0])
+        observer.observe(div[1])
+        observer.observe(div[2])
+        observer.observe(div[3])
+    </script>
+</body>
+</html>
