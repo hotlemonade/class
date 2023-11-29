@@ -617,3 +617,12 @@ footer{
 
 
 
+.err {
+    &:before {
+        content:'정보를 다시 입력하세';
+        color:red;display:block;
+    }
+    input {
+        outline:2px solid red;
+    }
+}
