@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>animals</h1>
+    <ul>
+        <li class="a">dog<span>Hello</span></li>
+        <li>cat</li>
+        <li>pig</li>
+        <li>bird</li>
+        <li>cow</li>
+    </ul>
+    
+    <script>
+        const a = document.querySelector('.a');
+        console.log(a.innerHTML,  a.textContent)
+        a.innerHTML = '<p>HEllo</p>'
+        const items = document.querySelectorAll('li')
+        const title = document.querySelector('h1')
+        console.log(items)
+
+        // for(let i=0; i<items.length; i++){
+        //     items[i].innerHTML = '<b>' + i + '</b>'
+        // }
+
+        // forEach 에서 순회해라 
+        items.forEach((item) => {
+            item.addEventListener('click',()=>{
+            title.innerHTML = item.innerHTML + '을 선택했습니다.'
+            item.style.color = 'red'
+            })
+        })
+
+
+        items[0].addEventListener('click', (e) => {
+            title.innerHTML = e.currentTarget.innerHTML ;
+        })
+        items[1].addEventListener('click', (e) => {
+            title.innerHTML = e.currentTarget.innerHTML ;
+        })
+        items[2].addEventListener('click', (e) => {
+            title.innerHTML = e.currentTarget.innerHTML ;
+        })
+        items[3].addEventListener('click', (e) => {
+            title.innerHTML = e.currentTarget.innerHTML ;
+        })
+        items[4].addEventListener('click', (e) => {
+            title.innerHTML = e.currentTarget.innerHTML ;
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>animals</h1>
+    <ul>
+        <li class="a">dog<span>Hello</span></li>
+        <li>cat</li>
+        <li>pig</li>
+        <li>bird</li>
+        <li>cow</li>
+    </ul>
+
+    <img src="./img/character_1.jpg" alt="" class="big">
+    <img src="./img/character_2.jpg" alt="" class="img">
+
+    <script>
+
+        const big = document.querySelector('.big')
+        const img = document.querySelector('.img')
+
+        const items = document.querySelectorAll('li')
+        // items = [ li, li, li, li, li ]
+        items.forEach( item => {
+            item.addEventListener('click', () => {
+                if(item.innerHTML === 'cow') {
+                    document.body.style.backgroundColor = 'tomato';
+                } else {
+                    document.body.style.backgroundColor = '#fff';
+                }
+            })
+        });
+
+        img.addEventListener('click',(e) => {
+           let target = e.currentTarget;
+           let url = target.getAttribute('src');
+           big.setAttribute('src',url);
+        })
+        console.log()
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .err { font-size:12px; color:black} 
+    </style>
+</head>
+
+<body>
+    <h1>COUNTING</h1>
+    <div class="container">
+        <button type="button" onclick="decrease()">-</button>
+        <span class="print">영</span>
+        <button type="button" onclick="increase()">+</button>
+    </div>
+
+    <p class="err">버튼을 클릭하세요</p>
+    
+
+    <script>
+        const print = document.querySelector('.print');
+        let count = 0;
+        const err = document.querySelector('.err')
+        
+        function decrease(){
+            // count = count - 1
+            if(count >= -9){
+                count--;
+                print.innerHTML = count;
+                err.innerHTML = "유효한 값입니다.";
+                err.style.color = 'olive'
+            }
+            else{
+                err.innerHTML = '유효한 값이 아닙니다';
+                err.style.color = 'red'
+            }
+            
+            
+        }
+
+        function increase(){
+            // count = count + 1
+            if(count <= 9){
+                count++; 
+                print.innerHTML = count;
+                err.innerHTML = "유효한 값입니다."
+                err.style.color = 'olive'
+            }
+            else{
+                err.innerHTML = '유효한 값이 아닙니다';
+                err.style.color = 'red'
+            }
+            
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>
