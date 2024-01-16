@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <input type="text" class="num1">
+    <input type="text" class="num2">
+
+    <button class="btn" onclick="">CALC</button>
+
+
+    <button class="btn2" onclick="popup('Javascript')">BTN 2</button>
+    <button class="btn3">BTN 3-EventListenr</button>
+
+    <!-- 합산 -->
+    <div class="result"></div>
+
+    <script>
+
+        const num1 = document.querySelector('.num1')
+        const num2 = document.querySelector('.num2')
+       
+        const btn = document.querySelector('.btn');
+        const result = document.querySelector('.result')
+
+        btn.addEventListener('click', () => {
+            let sum = Number(num1.value) + Number(num2.value)
+            result.innerHTML = sum 
+        })
+
+        
+
+
+
+
+
+
+
+
+        
+        function popup(msg) {
+            console.log(msg)
+        }
+
+        const btn3 = document.querySelector('.btn3');
+        btn3.addEventListener('click', ()=> {
+            popup('hello programming')
+        })
+
+
+
+        
+    </script>
+</body>
+</html>

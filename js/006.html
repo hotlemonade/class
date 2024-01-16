@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result {
+            border:1px solid #d8d8d8;
+            border-radius:20px;
+            padding:30px;
+            width:500px;margin:100px auto;
+        }
+
+        .result span {
+            color:red;
+            font-size:2em;
+        }
+    </style>
+</head>
+<body>
+    <form name="calcForm">
+        <input type="text" name="num1" class="number">
+        <input type="text" name="num2" class="number">
+
+        <button type="submit" class="btn">CALC</button> 
+    </form>
+
+    <div class="result">
+        <p>Answer is <span></span></p>
+    </div>
+
+    <script>
+       const numbers = document.querySelectorAll('.number')
+       console.log(numbers)
+
+       const form = document.forms.calcForm;
+       const num1 = form.num1;
+       const num2 = form.num2;
+       const btn = document.querySelector('.btn');
+       const span = document.querySelector('.result span')
+
+    //    form.addEventListener('submit', (e)=> {
+    //         e.preventDefault(); 
+    //         let sum = Number(num1.value) + Number(num2.value);
+    //         span.innerHTML = sum;
+
+    //    })
+
+       btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        if( num1.value === '' || num2.value === '') {
+            span.innerHTML = "EMPTY VALUES"
+        } else {
+            let sum = Number(num1.value) + Number(num2.value);
+            span.innerHTML = sum;
+        }
+       })
+       
+
+
+
+    </script>
+</body>
+</html>

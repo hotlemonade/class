@@ -5,8 +5,13 @@ for(let i=0; i < animals.length; i++){
 }
 
 let numbers = [1,3,5,2,8,11]
+let doubles = []
+
+
 let result = numbers.filter( ( num ) => num < 10 );
 console.log(result)
+
+
 
 
 
