@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="luckyNumber">
+        <input type="text" name="num" required placeholder="inputNumber">
+        <button type="submit">버튼</button>
+    </form>
+
+    <article class="print">
+        <p class="name"></p>
+        <span class="result"></span>
+    </article>
+
+
+    <!-- input에 값이 luckyNumber랑 동일한지 찾아라 -->
+
+    <!-- input의 값이 5인경우는 ture 그외인 경우에는 false 값이 나오게 만들어라 -->
+
+    <!-- if 만약 input == 5 이면 ture. else 이면 false -->
+    <script>
+        const fm = document.forms.luckyNumber;
+        const input = fm.num;
+        const luckyNum = 5;
+        const result =document.querySelector('.result')
+
+
+        fm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let userNum = Number(input.value);
+            result.innerHTML = userNum === luckyNum ? '러키!' :'실패' 
+        });
+
+        
+    </script>
+
+    
+
+
+</body>
+</html>
