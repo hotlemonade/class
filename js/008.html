@@ -7,21 +7,17 @@
 </head>
 <body>
     <form name="luckyNumber">
-        <input type="text" name="num" required placeholder="inputNumber">
-        <button type="submit">버튼</button>
+        <input type="text" name="num" required placeholder="name">
+        <button type="submit">도전!!</button>
     </form>
 
     <article class="print">
-        <p class="name"></p>
+        <SPAN class="name"></SPAN>COUNT
         <span class="result"></span>
     </article>
 
+    랜덤수가 나와서 맞췄을때에 '아무개님 3번 만에 성공 하셨어요.'
 
-    <!-- input에 값이 luckyNumber랑 동일한지 찾아라 -->
-
-    <!-- input의 값이 5인경우는 ture 그외인 경우에는 false 값이 나오게 만들어라 -->
-
-    <!-- if 만약 input == 5 이면 ture. else 이면 false -->
     <script>
         const fm = document.forms.luckyNumber;
         const input = fm.num;

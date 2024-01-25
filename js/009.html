@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]:invalid{
+            color: red;
+        }
+
+        .modal-container{
+            height: 100px;
+            width: 400px;
+            outline: 1px solid red;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="myForm" > 
+        <input type="text" name="num" pattern="[0-9]" required>
+        <button type="submit" class="open">버튼</button>
+    </form>
+
+    <div class="modal-container">
+        <p class="num">number</p>
+        <button type="button" class="close">close</button>
+    </div> 
+    <script>
+
+        // 버튼을 눌렀을때 모달창이 나오게 만들어라
+
+        // click을 하면 modal이 block 해라
+        // close를 하면 modal이 hidden 해라
+        //----------
+        
+        // 그런데 예외가 있다. input창에 꼭 내용이 들아가야 한다.그래야지 버튼이 실행되게 해야한다.
+
+        // input에 수를 적으면 p 태그에 수를 입력 받을 수 있도록 해라.
+        
+        
+        const fm = document.forms.myForm;
+        let close = document.querySelector('.close')
+        let modalContainer = document.querySelector('.modal-container')
+
+        // p태그
+        let p = document.querySelector('.num') 
+         
+        fm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // openModal(); 
+            
+            controlModal('block')
+            p.innerHTML = fm.num.value;
+        })
+ 
+        // close.addEventListener('click', closeModal);
+        
+        close.addEventListener('click', () => {
+            controlModal('none')
+        })
+        function openModal(){
+            modalContainer.style.display = 'block';
+            p.innerHTML = fm.num.value;
+        };
+        function closeModal(){
+            modalContainer.style.display = 'none'
+        };
+
+        function controlModal(status) {
+            modalContainer.style.display = status;
+        }
+
+
+        // function myFunction(a,b,c,...d) {
+        //     logic...
+        //     return a+b+c;
+        // }
+
+      
+        const myFunction = function(a,b,c) {
+
+        }
+
+        myFunction(a,b,c);
+
+        const myFunction = (a,b,c) => {
+
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
