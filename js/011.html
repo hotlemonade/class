@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <form action="" name="myForm">
+            <h1>행운의수를 찾기</h1>
+            <h2 class="msg"></h2>
+            <input type="text" name="result" readonly>
+            <button class="btn" type="submit">버튼</button>
+            <p class="count">0</p>
+            
+        </form>
+
+    </div>
+
+
+    <script>
+        // 랜덤으로 추출되는 숫자가 있는데 내가 숫자를 입력했을때 맞으면 성공에 수가 올라가게 하고 틀리면 실패에 수가 올라가게 해라
+
+        // 1.일단 input 창에 수를 들어갈 수 있게 만든다.
+        // 2.도전 버튼을 누를시 input의 숫자와 랜덤의 숫자를 비교하여 계산한다.
+        // 성공하면 성공창에 +1 해주고 실패하면 실패창에 +1 한다.
+
+        // ----
+
+        // 현재 랜덤으로 생성되는 변수를 만들었다 이젠 랜덤변수와 input을 서로 비교해야한다.
+
+        const fm = document.forms.myForm
+        const count = document.querySelector('.count')
+        let fail = 0;
+        let success = 0;
+        let msg = document.querySelector('.msg')
+        const lucky = 7;
+
+        fm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let randomNum = Math.floor(Math.random()*10 + 1);
+            fm.result.value = randomNum;
+            if( lucky === randomNum ){
+                msg.innerHTML = '성공';
+                success++;
+            }else{
+                msg.innerHTML = '실패';
+                fail++;
+            }
+
+            count.innerHTML = ` 성공 <b>${success}</b>회, 실패 <i>${fail}</i>회`
+        })
+
+
+    </script>
+
+</body>
+</html>
