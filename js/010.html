@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" name="myForm">
+        <input type="text" name="num" pattern="[0-9]" required class="num">
+        <button type="submit" class="btn">버튼</button>
+    </form>
+    
+    <div class="ture">
+        <p>성공</p>
+        <p class="ture-p"></p>
+    </div>
+
+    <div class="false">
+        <p>실패</p>
+        <p class="flase-p"></p>
+    </div>
+
+
+    <script>
+
+        let random = Math.floor(Math.random() * 10);
+        console.log(random)
+        const fm = document.forms.myForm;
+        let btn = document.querySelector('.btn')
+        let num = document.querySelector('.num')
+        let tureP = document.querySelector('.ture-p')
+        let falseP = document.querySelector('.flase-p')
+
+        btn.addEventListener('click', (e) => {
+            result()
+        })
+
+        function result(){
+            if( random ==  fm.num.value){
+                tureP.innerHTML = '성공'
+            }else{
+                falseP.innerHTML = '실패'
+            }
+        }
+
+        // 랜덤으로 추출되는 숫자가 있는데 내가 숫자를 입력했을때 맞으면 성공에 수가 올라가게 하고 틀리면 실패에 수가 올라가게 해라
+
+        // 1.일단 input 창에 수를 들어갈 수 있게 만든다.
+        // 2.도전 버튼을 누를시 input의 숫자와 랜덤의 숫자를 비교하여 계산한다.
+        // 성공하면 성공창에 +1 해주고 실패하면 실패창에 +1 한다.
+
+        // ----
+
+        // 현재 랜덤으로 생성되는 변수를 만들었다 이젠 랜덤변수와 input을 서로 비교해야한다.
+    </script>
+</body>
+</html>
