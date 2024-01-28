@@ -17,25 +17,7 @@
 
     <script>
 
-        let random = Math.floor(Math.random() * 10);
-        console.log(random)
-        const fm = document.forms.myForm;
-        let btn = document.querySelector('.btn')
-        let num = document.querySelector('.num')
-        let tureP = document.querySelector('.ture-p')
-        let falseP = document.querySelector('.flase-p')
-
-        btn.addEventListener('click', (e) => {
-            result()
-        })
-
-        function result(){
-            if( random ==  fm.num.value){
-                tureP.innerHTML = '성공'
-            }else{
-                falseP.innerHTML = '실패'
-            }
-        }
+        
 
         // 랜덤으로 추출되는 숫자가 있는데 내가 숫자를 입력했을때 맞으면 성공에 수가 올라가게 하고 틀리면 실패에 수가 올라가게 해라
 
@@ -46,6 +28,9 @@
         // ----
 
         // 현재 랜덤으로 생성되는 변수를 만들었다 이젠 랜덤변수와 input을 서로 비교해야한다.
+
+        let randomNum = Math.floor(Math.random()*10 );
+        console.log(randomNum)
     </script>
 </body>
 </html>

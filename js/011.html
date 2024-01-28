@@ -42,19 +42,26 @@
         let msg = document.querySelector('.msg')
         const lucky = 7;
 
+        // fm 에 기능이 실행되었때 (submit) 기능을 실행해라.
+        // e.preventDefault 는 해당 기능이 실행되었을때 최기화 되는것을 방지한다.
         fm.addEventListener('submit', (e) => {
             e.preventDefault();
+            // randomNum = 수학을 이용하는데 floor는 정수만 추출해준다.
+            // random은 아무 수나 랜덤으로 추출한다
             let randomNum = Math.floor(Math.random()*10 + 1);
+            // result의 value 값이 randomNum 이랑 같으면 해당 기능을 실행해라.
             fm.result.value = randomNum;
+            // lucky 가 randomNum 이랑 같으면 msg에 성공을 노출 시키고 success에 +1 을 해라
             if( lucky === randomNum ){
                 msg.innerHTML = '성공';
                 success++;
+            // 그외 msg에 실패를 노출시키고 fail 에 +1을 해라
             }else{
                 msg.innerHTML = '실패';
                 fail++;
             }
 
-            count.innerHTML = ` 성공 <b>${success}</b>회, 실패 <i>${fail}</i>회`s
+            count.innerHTML = ` 성공 <b>${success}</b>회, 실패 <i>${fail}</i>회`
         })
 
 
