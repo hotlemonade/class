@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>localStorage</h1>
+    <form name="myForm">
+        <input type="text" required name="todo">
+        <button type="submit" class="subBtn">Add todo</button>
+    </form>
+    <button type="button" class="clear">clear storage</button>
+    <ul class="todo-list">
+
+    </ul>
+    <script>
+        const fm = document.forms.myForm;
+        const list = document.querySelector('.todo-list');
+        const btn = document.querySelector('.clear');
+        let todos = [];
+        let allList = '';
+         
+        fm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            allList = '';
+            todos.push(fm.todo.value); 
+            
+            localStorage.setItem('hui',JSON.stringify(todos))
+            
+            let localTodo = JSON.parse(localStorage.getItem('hui')); 
+
+         
+
+             todos.forEach( (data,i) => {
+                allList += `<li>${i}. ${data}</li>`;
+             });
+
+             list.innerHTML = allList;
+        })
+
+        btn.addEventListener('click', () => { 
+            localStorage.clear();
+            allList= '';
+            list.innerHTML = '';
+        })
+ 
+    </script>
+</body>
+</html>

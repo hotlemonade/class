@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>localStorage</h1>
+    <form name="myForm">
+        <input type="text" required name="todo">
+        <button type="submit" class="subBtn">Add todo</button>
+    </form>
+    <button type="button" class="clear">clear storage</button>
+    <div class="todo-list">
+
+    </div>
+    <script>
+        const fm = document.forms.myForm;
+        const list = document.querySelector('.todo-list');
+        const btn = document.querySelector('.clear');
+
+        
+
+        // submit을 했을떄 todo-list에 해당 값을 노출 시켜라
+        // 1. submit을 했을경우
+        // 2. input의 값을 가져와서 변수에다 담아둔다.
+        // 3. 담아둔 변수를 localstorage 값으로 보낸다.
+        // 4. localstorage 를 가져와서 변수에 담는다.
+        // 5. 그 변수를 todo-list 의 innerHtml 에 뿌린다.
+        
+
+        fm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let todo = fm.todo.value
+            
+            localStorage.setItem('hui',todo)
+            
+            let localTodo = localStorage.getItem('hui')
+
+            list.innerHTML = localTodo
+        })
+
+        btn.addEventListener('click', () => { localStorage.clear() })
+/*
+
+       localStorage.setItem('name','hello')
+       let result = localStorage.getItem('name')
+       console.log(result);
+  */
+    </script>
+</body>
+</html>
