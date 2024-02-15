@@ -14,3 +14,39 @@
     top:50%;
     transform:translate(-50%, -50%);
 }
+
+@mixin flex($a:center, $j:space-between,$g:null, $w:null) {
+    display:flex;
+    justify-content:$j;
+    align-items:$a;
+    gap:$g;
+    flex-wrap:$w;
+}
+
+@mixin border($w:1px, $s:solid, $c:$line) {
+    border:$w $s $c;
+}
+@mixin border2($w, $s,$c) {
+    border:$w $s $c;
+}
+@mixin border3 {
+    border:1px solid $line;
+}
+
+@mixin blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden; 
+}
+
+%blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden; 
+}

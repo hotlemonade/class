@@ -1,0 +1,167 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  /* font-weight:normal; */
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.blind, legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container .gnb li:nth-child(2) {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: tomato;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
+.container h1 {
+  text-align: center;
+  font-size: 4rem;
+  width: 22.5%; /* 270px / 1200px * 100% */
+  background-color: olive;
+}
+.container .gnb {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+.container .gnb li {
+  flex-basis: 25%;
+}
+.container .gnb li:nth-child(odd) {
+  background-color: #999;
+}
+.container .gnb li:nth-child(even) {
+  background-color: #d8d8d8;
+}
+.container .gnb span {
+  font-size: 0.8em;
+}
+
+@media all and (max-width: 1200px) {
+  body {
+    background-color: skyblue;
+    color: #000;
+  }
+}
+@media all and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    background-color: olive;
+  }
+  .container .gnb {
+    flex-wrap: wrap;
+  }
+  .container .gnb li {
+    flex-basis: 50%;
+  }
+}
+@media all and (max-width: 640px) {
+  .container h1 {
+    font-size: 6.25vw;
+  }
+  .container .gnb {
+    display: block;
+  }
+  .container .gnb li:last-child {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
+  body {
+    background-color: pink;
+  }
+}
+/*
+@debug $primary;
+@debug nth($gray, 3);
+@debug map-get($device, mobile)
+*/
+.a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  border: 1px solid red;
+}
+
+.b {
+  border: 2px solid red;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.c {
+  border: 1px dashed blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=response.css.map */
