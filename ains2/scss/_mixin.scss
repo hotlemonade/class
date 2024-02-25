@@ -1,9 +1,9 @@
 
 
-@mixin flex($a:null, $j:space-between, $g:null, $w:null){
+@mixin flex($a:null, $j:null, $g:null, $w:null){
     display: flex;
     justify-content: $j;
-    align-items: &a;
+    align-items: $a; 
     gap: $g;
     flex-wrap: $w;
 }
