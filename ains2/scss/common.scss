@@ -24,7 +24,11 @@
         padding: 50px 0 30px 0;
 
         h1{
+            outline: 1px solid red;
+            padding: 10px 0;
+            
             a{
+                padding: 10px 10px;
                 img{
                     height: 30px;
                     width: auto;
@@ -47,20 +51,15 @@
                     transition: 0.3s;
 
                     a{
+                        display: block;
                         position: relative;
-                        padding: 0 10px;
+                        padding: 10px;
+                        outline: 1px solid red;
+                        
                     }
                     
                     a:after{
-                        content: "";
-                        position: absolute;
-                        background-color: antiquewhite;
-                        border-radius: 20px;
-                        height: 3px;
-                        width: 0;
-                        left: 0;
-                        bottom: -10px;
-                        transition: 0.3s;                  
+                        @include hoverLine;                  
                     }
 
                     a:hover:after{
@@ -70,7 +69,7 @@
                 }
 
                 li:hover{
-                    color: #e2e2e2;
+                    @include hoverColor;
                 }
 
                 
@@ -83,7 +82,7 @@
                 height: 30px;
                 position: relative;
                 z-index:101;
-                
+                outline: 1px solid red;
 
                 b {
                     @extend %blind;
@@ -97,9 +96,11 @@
                     border-radius: 30px;
                     background: #fff;
                     transition: all .35s;
+                    
 
                     &:first-child {
                         top:0;
+                        
                     }
 
                     &:nth-child(2) { 
@@ -114,6 +115,9 @@
 
                 &.open {
                     span {
+
+                        background: #000000;
+
                         &:first-child {
                             top: 50%;
                             transform: translateY(-50%) rotate(45deg);
@@ -128,7 +132,9 @@
                             transform: translateY(50%) rotate(-45deg);
                         }
                     }
-                } 
+                }
+                
+                
                  
             }
 
@@ -149,30 +155,69 @@
     height: 100vh;
     position: relative;
 
+    
+
     .inner-banner{
         @extend %base;
+        
+        .btn-box{
+            @include flex();
+            position: absolute;
+            transform:rotate(-90deg);
+            outline: 1px solid red;
+            left: 2%;
+            top: 52%;
+
+            a{
+                color: #fff;
+                font-size: 25px;
+                transition: 0.3s;
+
+                display: block;
+                position: relative;
+                padding: 10px;
+                outline: 1px solid red;
+
+                a:after{
+                    @include hoverLine;
+                    
+                }
+
+                a:hover:after{
+                    width: 100%;
+                }
+                
+                
+
+                &:first-child{
+                    margin: 0;
+                    
+                    
+                }
+
+                &:last-child{
+                    margin-left: 80px;
+                    
+                }
+            }
+
+            a:hover{
+                @include hoverColor2;
+            }
+    
+        }
         
         // height: 100vh;
         // flex-direction: column;
         // justify-content: center;
+
 
         .main-banner{
             outline: 1px solid green;
             display: flex;
             position: absolute;
             top: 40%;
-
-            .btn-box{
-                transform:rotate(-90deg); 
-
-                a{
-                    background-color: rgba(0, 0, 0, 0);
-                    color: #fff;
-                    margin-right: 30px;
-                    font-size: 20px;
-                }
-    
-            }
+            left: 16%;
     
             .banner-title{
                 h2{
@@ -212,7 +257,8 @@
     }
 }
 
-.menu-modal {   
+.menu-modal {
+    
     display:none;
     position:fixed;
     width:100vw;height:100vh;
@@ -225,6 +271,29 @@
 
     &.open {
         display:block;
+    }
+
+    .modal-contents{
+        
+        @extend %modalBase;
+        background-color: antiquewhite;
+        margin-top: 135px;
+
+        .contents-depth1{
+            outline: 1px solid blue;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 50px;
+            font-weight: 700;
+
+            .contents-depth2{
+                outline: 1px solid red;
+                font-size: 25px;
+                font-weight: 300;
+                text-align: left;
+                
+            }
+        }
     }
 
 }

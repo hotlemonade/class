@@ -7,3 +7,23 @@
     gap: $g;
     flex-wrap: $w;
 }
+
+@mixin hoverColor{
+    color: #d3d1d1;
+}
+
+@mixin hoverColor2{
+    color:#626262;
+}
+
+@mixin hoverLine{
+    content: "";
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s; 
+}
