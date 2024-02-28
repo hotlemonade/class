@@ -1,6 +1,12 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
+$hover : (
+    menu : #d3d1d1,
+    page : #626262,
+    modal : red
+);
+
 @import 'reset','extends','mixin';
 
 
@@ -49,28 +55,20 @@
                 li{
                     color: #fff;
                     transition: 0.3s;
+                    &:hover {
+                        color : map-get($hover, menu);
+                    }
 
                     a{
                         display: block;
                         position: relative;
                         padding: 10px;
                         outline: 1px solid red;
-                        
-                    }
-                    
-                    a:after{
-                        @include hoverLine;                  
-                    }
 
-                    a:hover:after{
-                        width: 100%;
-                        
-                    }
+                        @include hoverLine;   
+                    } 
                 }
-
-                li:hover{
-                    @include hoverColor;
-                }
+ 
 
                 
             }
@@ -161,49 +159,28 @@
         @extend %base;
         
         .btn-box{
-            @include flex();
+            @include flex($g:80px);
             position: absolute;
             transform:rotate(-90deg);
             outline: 1px solid red;
             left: 2%;
             top: 52%;
+            
 
             a{
                 color: #fff;
                 font-size: 25px;
                 transition: 0.3s;
-
                 display: block;
                 position: relative;
                 padding: 10px;
                 outline: 1px solid red;
-
-                a:after{
-                    @include hoverLine;
-                    
-                }
-
-                a:hover:after{
-                    width: 100%;
-                }
-                
-                
-
-                &:first-child{
-                    margin: 0;
-                    
-                    
-                }
-
-                &:last-child{
-                    margin-left: 80px;
-                    
+                @include hoverLine;
+                &:hover{
+                    color:map-get($hover,page);
                 }
             }
 
-            a:hover{
-                @include hoverColor2;
-            }
     
         }
         
@@ -264,14 +241,22 @@
     width:100vw;height:100vh;
     left:0;top:0;
     background-color:rgb(255, 255, 255);
-    color:#000000;
-    text-align:center;
-    font-size:50px;
     z-index:100;
-
+    transition: 0.3s;
+    
+    // open 태그가 붙었을때 0% 100%로 늘어나야한다.
     &.open {
         display:block;
+        background-color: #fff;
+        width: 100%; height: 100%
     }
+    
+    .title {
+        color:#000000;
+        font-size:50px;
+    }
+
+
 
     .modal-contents{
         
@@ -279,21 +264,53 @@
         background-color: antiquewhite;
         margin-top: 135px;
 
-        .contents-depth1{
+        .depth1{
             outline: 1px solid blue;
+            /*
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            // grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:1fr 1fr 1fr;
+            gap:10px 50px; // row-gap, column-gap;
+            */
+
+            @include flex($g:55px, $w:wrap);
+
+            & > li {
+                outline:1px solid green;
+            }
+
             font-size: 50px;
             font-weight: 700;
 
-            .contents-depth2{
+            .depth2{
                 outline: 1px solid red;
                 font-size: 25px;
-                font-weight: 300;
-                text-align: left;
+                font-weight: 300; 
                 
             }
         }
     }
 
 }
+.flex-test {
+    outline:1px solid red;
+    width:800px; 
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    row-gap:55px;
+    
+
+    div { 
+        flex-basis:calc(100% / 3);
+        $bg : gold, olive, tomato, blue, pink, violet;
+       
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                background-color:nth($bg, $i);
+            }
+        }
+    }
+}
+
