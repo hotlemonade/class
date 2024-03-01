@@ -254,6 +254,7 @@ $hover : (
     .title {
         color:#000000;
         font-size:50px;
+        
     }
 
 
@@ -263,9 +264,14 @@ $hover : (
         @extend %modalBase;
         background-color: antiquewhite;
         margin-top: 135px;
+       
 
         .depth1{
             outline: 1px solid blue;
+            font-size: 50px;
+            // font-weight: 700;
+            // padding-bottom: 30px;
+            
             /*
             display: grid;
             // grid-template-columns: repeat(3, 1fr);
@@ -273,19 +279,48 @@ $hover : (
             gap:10px 50px; // row-gap, column-gap;
             */
 
-            @include flex($g:55px, $w:wrap);
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            
 
             & > li {
                 outline:1px solid green;
+                flex-basis:calc(100% / 3);
             }
 
-            font-size: 50px;
-            font-weight: 700;
+            .title{
+                font-weight: 700;
+                transition: 0.3s;
+                position: relative;
+                
+                &:hover{
+                    color: red;
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    background-color: red;
+                    right: -20px;
+                    bottom: 20px;
+                }
+            }
+
+            
 
             .depth2{
                 outline: 1px solid red;
                 font-size: 25px;
-                font-weight: 300; 
+                font-weight: 300;
+                margin-top: 30px;
+
+                li{
+                    margin-top: 10px;
+                }
                 
             }
         }
