@@ -27,6 +27,34 @@ function openMenu(){
 
 openMenu()
 
+function banner(){
 
+    let images = ["img/banner-bg1.jpeg", "img/banner-bg2.jpeg", "img/banner-bg3.jpeg"]
+    let currentImage = 0;
+    let backgroundDiv = document.querySelector(".banner-bg")
+
+    setInterval(function() {
+        backgroundDiv.style.backgroundImage = 'url(' + images[currentImage] + ')';
+        currentImage = (currentImage + 1) % images.length;
+    }, 5000); // 5초마다 이미지 변경
+
+}
+
+banner()
+
+function bannerNext(){
+    let images = ["img/banner-bg1.jpeg", "img/banner-bg2.jpeg", "img/banner-bg3.jpeg"]
+    let currentImage = 0;
+    let backgroundDiv = document.querySelector(".banner-bg")
+
+    backgroundDiv.style.backgroundImage = 'url(' + images[currentImage] + ')';
+
+    document.querySelector('.nextBtn').addEventListener('click', function() {
+        backgroundDiv.style.backgroundImage = 'url(' + images[currentImage] + ')';
+        currentImage = (currentImage + 1) % images.length;
+    });
+}
+
+bannerNext()
 
 
