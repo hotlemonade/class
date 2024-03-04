@@ -269,7 +269,7 @@ $hover : (
     .modal-contents{
         
         @extend %modalBase;
-        background-color: antiquewhite;
+        // background-color: antiquewhite;
         margin-top: 135px;
         transition: all 0.3s;
        
@@ -306,7 +306,7 @@ $hover : (
                     color: red;
                 }
 
-                &:after{
+                &:hover::after{
                     content: "";
                     position: absolute;
                     height: 10px;
@@ -316,18 +316,28 @@ $hover : (
                     right: -20px;
                     bottom: 20px;
                 }
+
             }
 
             
 
             .depth2{
                 outline: 1px solid red;
-                font-size: 25px;
-                font-weight: 300;
+                font-size: 23px;
+                font-weight: 400;
                 margin-top: 30px;
 
                 li{
                     margin-top: 10px;
+
+                    a{
+                        color: #626262;
+                        transition: 0.3s;
+                    }
+
+                    a:hover{
+                        color: red;
+                    }
                 }
                 
             }
@@ -335,25 +345,25 @@ $hover : (
     }
 
 }
-.flex-test {
-    outline:1px solid red;
-    width:800px; 
-    margin:0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-    row-gap:55px;
+// .flex-test {
+//     outline:1px solid red;
+//     width:800px; 
+//     margin:0 auto;
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap:wrap;
+//     row-gap:55px;
     
 
-    div { 
-        flex-basis:calc(100% / 3);
-        $bg : gold, olive, tomato, blue, pink, violet;
+//     div { 
+//         flex-basis:calc(100% / 3);
+//         $bg : gold, olive, tomato, blue, pink, violet;
        
-        @for $i from 1 through 6 {
-            &:nth-child(#{$i}) {
-                background-color:nth($bg, $i);
-            }
-        }
-    }
-}
+//         @for $i from 1 through 6 {
+//             &:nth-child(#{$i}) {
+//                 background-color:nth($bg, $i);
+//             }
+//         }
+//     }
+// }
 
